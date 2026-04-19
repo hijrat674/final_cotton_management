@@ -1,0 +1,9 @@
+.table .badge-soft-danger,
+.table .badge-soft-success {
+    min-width: 88px;
+    text-align: center;
+}
+
+.summary-card .summary-card-value {
+    color: var(--color-text);
+}

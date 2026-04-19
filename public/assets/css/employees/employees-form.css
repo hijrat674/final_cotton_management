@@ -1,0 +1,26 @@
+.employee-form-card {
+    background: #fff;
+    border: 1px solid rgba(219, 226, 234, 0.8);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 1.5rem;
+}
+
+.employee-form-help {
+    background: linear-gradient(180deg, #fff, #f7fbff);
+}
+
+.employee-guidance-list {
+    padding-left: 1rem;
+    color: var(--color-text-muted);
+}
+
+[dir="rtl"] .employee-form-card,
+[dir="rtl"] .employee-form-help {
+    text-align: right;
+}
+
+[dir="rtl"] .employee-guidance-list {
+    padding-left: 0;
+    padding-right: 1rem;
+}

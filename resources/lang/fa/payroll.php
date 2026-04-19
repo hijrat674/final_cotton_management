@@ -1,0 +1,68 @@
+<?php
+
+return [
+    'index' => [
+        'title' => 'معاش',
+        'page_title' => 'معاش',
+        'page_subtitle' => 'ریکاردهای ماهانه معاش با وضعیت پرداخت، بیلانس‌ها و دید معاش',
+        'records_title' => 'ریکاردهای معاش',
+        'records_text' => 'دوره‌های معاش، پیشرفت پرداخت و بیلانس‌های باقی‌مانده معاش را بررسی کنید.',
+    ],
+    'summary' => [
+        'total_salary' => 'مجموع معاش',
+        'advance_deduction' => 'کسر پیش‌پرداخت',
+        'paid' => 'پرداخت‌شده',
+        'remaining' => 'باقی‌مانده',
+        'employees_fully_paid' => 'کارمندان کاملاً پرداخت‌شده',
+    ],
+    'filters' => [
+        'employee' => 'کارمند',
+        'all_employees' => 'همه کارمندان',
+        'month' => 'ماه',
+        'all_months' => 'همه ماه‌ها',
+        'year' => 'سال',
+        'all_years' => 'همه سال‌ها',
+        'sort' => 'ترتیب',
+        'latest' => 'جدیدترین',
+        'oldest' => 'قدیمی‌ترین',
+    ],
+    'table' => [
+        'employee' => 'کارمند',
+        'period' => 'دوره',
+        'gross' => 'ناخالص',
+        'advance' => 'پیش‌پرداخت',
+        'net' => 'خالص',
+        'paid' => 'پرداخت‌شده',
+        'remaining' => 'باقی‌مانده',
+        'status' => 'وضعیت',
+        'actions' => 'عملیات',
+    ],
+    'actions' => [
+        'create_salary_record' => 'ایجاد ریکارد معاش',
+        'apply_filters' => 'اعمال فلترها',
+        'reset' => 'بازنشانی',
+        'view' => 'نمایش',
+    ],
+    'statuses' => [
+        'unpaid' => 'پرداخت‌نشده',
+        'partial' => 'قسمی',
+        'paid' => 'پرداخت‌شده',
+    ],
+    'months' => [
+        'january' => 'جنوری',
+        'february' => 'فبروری',
+        'march' => 'مارچ',
+        'april' => 'اپریل',
+        'may' => 'می',
+        'june' => 'جون',
+        'july' => 'جولای',
+        'august' => 'آگست',
+        'september' => 'سپتمبر',
+        'october' => 'اکتبر',
+        'november' => 'نوامبر',
+        'december' => 'دسامبر',
+    ],
+    'messages' => [
+        'empty' => 'هیچ ریکارد معاشی با فلترهای شما مطابقت نداشت.',
+    ],
+];

@@ -1,0 +1,26 @@
+.payment-history-stack {
+    display: grid;
+    gap: 1rem;
+}
+
+.payment-history-card {
+    border: 1px solid rgba(219, 226, 234, 0.8);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    background: #fff;
+}
+
+.payment-history-initial {
+    background: #f8fbff;
+}
+
+.payment-summary-card {
+    position: sticky;
+    top: 1.5rem;
+}
+
+@media (max-width: 991.98px) {
+    .payment-summary-card {
+        position: static;
+    }
+}

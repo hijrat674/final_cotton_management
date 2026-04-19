@@ -1,0 +1,36 @@
+.sale-form-card {
+    background: #fff;
+    border: 1px solid rgba(219, 226, 234, 0.85);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 1.5rem;
+}
+
+.sale-item-row {
+    border: 1px solid rgba(219, 226, 234, 0.85);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    background: #fbfdff;
+}
+
+.sale-item-total,
+.summary-breakdown {
+    display: grid;
+    gap: 0.85rem;
+}
+
+.sale-item-total {
+    color: var(--color-text-muted);
+}
+
+.sale-item-total strong,
+.summary-breakdown strong {
+    color: var(--color-text);
+}
+
+.summary-breakdown div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+}

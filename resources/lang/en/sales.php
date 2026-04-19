@@ -1,0 +1,55 @@
+<?php
+
+return [
+    'index' => [
+        'title' => 'Sales',
+        'page_title' => 'Sales',
+        'page_subtitle' => 'Invoice register with balance tracking, payment status, and date filtering',
+        'register_title' => 'Invoice Register',
+        'register_text' => 'Filter by customer and date range to review collections and pending balances.',
+    ],
+    'summary' => [
+        'invoices' => 'Invoices',
+        'invoices_text' => 'Filtered sales count',
+        'revenue' => 'Revenue',
+        'revenue_text' => 'Invoice totals',
+        'paid' => 'Paid',
+        'paid_text' => 'Collected so far',
+        'pending' => 'Pending',
+        'pending_text' => 'Outstanding receivables',
+    ],
+    'filters' => [
+        'customer' => 'Customer',
+        'all_customers' => 'All Customers',
+        'from' => 'From',
+        'to' => 'To',
+        'sort' => 'Sort',
+        'latest' => 'Latest',
+        'oldest' => 'Oldest',
+    ],
+    'table' => [
+        'invoice' => 'Invoice',
+        'customer' => 'Customer',
+        'date' => 'Date',
+        'total' => 'Total',
+        'paid' => 'Paid',
+        'remaining' => 'Remaining',
+        'status' => 'Status',
+        'actions' => 'Actions',
+    ],
+    'actions' => [
+        'new' => 'New Sale',
+        'apply_filters' => 'Apply Filters',
+        'reset' => 'Reset',
+        'view' => 'View',
+        'edit' => 'Edit',
+        'collect' => 'Collect',
+        'delete' => 'Delete',
+    ],
+    'messages' => [
+        'number' => 'Sale #:id',
+        'handled_by' => 'Handled by :name',
+        'delete_confirm' => 'Delete Sale #:id? This is only allowed when no payment has been collected.',
+        'empty' => 'No sales matched your current filters.',
+    ],
+];

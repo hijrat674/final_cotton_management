@@ -1,0 +1,18 @@
+.filters-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.report-hero,
+.ledger-card,
+.chart-card {
+    border-radius: var(--radius-lg);
+}
+
+.summary-card .summary-card-value {
+    word-break: break-word;
+}
+
+.content-card .table-responsive {
+    overflow-x: auto;
+}

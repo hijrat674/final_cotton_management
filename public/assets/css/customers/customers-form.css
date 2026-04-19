@@ -1,0 +1,16 @@
+.customer-form-card {
+    background: #fff;
+    border: 1px solid rgba(219, 226, 234, 0.8);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 1.5rem;
+}
+
+.customer-form-help {
+    background: linear-gradient(180deg, #fff, #f8fbff);
+}
+
+.customer-guidance-list {
+    padding-left: 1rem;
+    color: var(--color-text-muted);
+}

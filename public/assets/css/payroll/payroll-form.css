@@ -1,0 +1,23 @@
+.payroll-form-card {
+    background: #fff;
+    border: 1px solid rgba(219, 226, 234, 0.82);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 1.5rem;
+}
+
+.payroll-summary-card {
+    background: linear-gradient(180deg, #fff, #f8fbff);
+}
+
+.summary-breakdown {
+    display: grid;
+    gap: 0.9rem;
+}
+
+.summary-breakdown div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+}

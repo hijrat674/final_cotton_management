@@ -1,0 +1,364 @@
+.filters-form {
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    background: var(--color-surface-muted);
+}
+
+.summary-showcase,
+.summary-showcase * {
+    font-family: 'Poppins', var(--font-sans);
+}
+
+.inventory-summary-section {
+    padding: 1.75rem;
+    background:
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.users-summary-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.users-summary-title {
+    margin: 0 0 0.3rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #101828;
+}
+
+.users-summary-text {
+    color: #667085;
+    font-size: 0.95rem;
+}
+
+.users-summary-grid {
+    row-gap: 1rem;
+}
+
+.users-summary-card {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr);
+    align-items: start;
+    gap: 1rem;
+    min-height: 100%;
+    min-width: 0;
+    padding: 1.15rem 1.2rem;
+    border-radius: 1.1rem;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(219, 226, 234, 0.85);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.users-summary-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+    border-color: rgba(191, 219, 254, 0.95);
+}
+
+.users-summary-icon {
+    width: 3rem;
+    height: 3rem;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    font-size: 1.25rem;
+    align-self: start;
+}
+
+.users-summary-copy {
+    display: grid;
+    gap: 0.45rem;
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+.users-summary-value-wrap {
+    min-width: 0;
+    width: 100%;
+}
+
+.users-summary-label {
+    color: #667085;
+    font-size: 0.88rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.users-summary-value {
+    color: #101828;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(1rem, 0.7rem + 0.9vw, 1.8rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+    font-variant-numeric: tabular-nums;
+}
+
+.users-summary-meta {
+    color: #667085;
+    font-size: 0.82rem;
+    line-height: 1.4;
+}
+
+.inventory-summary-card-total .users-summary-icon {
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.12);
+}
+
+.inventory-summary-card-balance .users-summary-icon {
+    color: #0f766e;
+    background: rgba(15, 118, 110, 0.12);
+}
+
+.inventory-summary-card-low .users-summary-icon {
+    color: #d97706;
+    background: rgba(217, 119, 6, 0.12);
+}
+
+.inventory-summary-card-empty .users-summary-icon {
+    color: #dc2626;
+    background: rgba(220, 38, 38, 0.12);
+}
+
+.inventory-item-summary-head {
+    margin-top: 1.75rem;
+}
+
+.inventory-item-summary-title {
+    font-size: 1.1rem;
+}
+
+.inventory-item-label {
+    color: #344054;
+    display: block;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.inventory-card-head,
+.inventory-card-foot,
+.inventory-stock-wrap {
+    min-width: 0;
+}
+
+.inventory-stock-line {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.2rem 0.45rem;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    direction: ltr;
+    font-size: clamp(0.8rem, 0.56rem + 0.72vw, 1.3rem);
+    letter-spacing: 0;
+}
+
+.inventory-stock-value {
+    flex: 1 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.15;
+}
+
+.inventory-stock-unit {
+    flex: 0 0 auto;
+    display: inline-block;
+    color: #667085;
+    font-size: 0.7em;
+    font-weight: 600;
+    letter-spacing: 0;
+    white-space: nowrap;
+    min-width: fit-content;
+}
+
+.inventory-item-card-raw-cotton .users-summary-icon {
+    color: #16a34a;
+    background: rgba(22, 163, 74, 0.12);
+}
+
+.inventory-item-card-processed-cotton .users-summary-icon {
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.12);
+}
+
+.inventory-item-card-kernel .users-summary-icon {
+    color: #c2410c;
+    background: rgba(194, 65, 12, 0.12);
+}
+
+.inventory-item-card-cotton-oil .users-summary-icon {
+    color: #0ea5e9;
+    background: rgba(14, 165, 233, 0.12);
+}
+
+.inventory-item-card-cotton-meal .users-summary-icon {
+    color: #7c3aed;
+    background: rgba(124, 58, 237, 0.12);
+}
+
+.inventory-item-card-waste .users-summary-icon {
+    color: #dc2626;
+    background: rgba(220, 38, 38, 0.12);
+}
+
+.inventory-item-card-shell .users-summary-icon {
+    color: #0891b2;
+    background: rgba(8, 145, 178, 0.12);
+}
+
+.inventory-item-card-raw-material .users-summary-icon {
+    color: #16a34a;
+    background: rgba(22, 163, 74, 0.12);
+}
+
+.inventory-item-card-semi-finished .users-summary-icon {
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.12);
+}
+
+.inventory-item-card-finished-product .users-summary-icon {
+    color: #7c3aed;
+    background: rgba(124, 58, 237, 0.12);
+}
+
+.inventory-item-card-byproduct .users-summary-icon {
+    color: #0ea5e9;
+    background: rgba(14, 165, 233, 0.12);
+}
+
+.inventory-item-card-default .users-summary-icon {
+    color: #475467;
+    background: rgba(71, 84, 103, 0.12);
+}
+
+.action-icon-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+}
+
+.action-icon-btn i {
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+[dir="rtl"] .inventory-summary-section {
+    text-align: right;
+}
+
+[dir="rtl"] .inventory-summary-section .users-summary-title {
+    font-size: 1.18rem;
+}
+
+[dir="rtl"] .inventory-summary-section .users-summary-text {
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+[dir="rtl"] .inventory-summary-section .users-summary-card {
+    grid-template-columns: minmax(0, 1fr) 3rem;
+}
+
+[dir="rtl"] .inventory-summary-section .users-summary-icon {
+    justify-self: end;
+}
+
+[dir="rtl"] .inventory-summary-section .users-summary-copy {
+    text-align: right;
+}
+
+[dir="rtl"] .inventory-summary-section .users-summary-label {
+    font-size: 0.82rem;
+    line-height: 1.55;
+}
+
+[dir="rtl"] .inventory-summary-section .users-summary-value {
+    font-size: clamp(0.95rem, 0.66rem + 0.7vw, 1.55rem);
+}
+
+[dir="rtl"] .inventory-summary-section .users-summary-meta {
+    font-size: 0.78rem;
+    line-height: 1.55;
+}
+
+[dir="rtl"] .inventory-stock-line {
+    justify-content: flex-start;
+    font-size: clamp(0.76rem, 0.54rem + 0.62vw, 1.1rem);
+}
+
+@media (max-width: 1199.98px) {
+    .inventory-stock-line {
+        font-size: clamp(0.78rem, 0.54rem + 0.72vw, 1.15rem);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .inventory-summary-section {
+        padding: 1.25rem;
+    }
+
+    .users-summary-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .users-summary-card {
+        grid-template-columns: 2.75rem minmax(0, 1fr);
+        padding: 1rem;
+    }
+
+    [dir="rtl"] .inventory-summary-section .users-summary-title {
+        font-size: 1.08rem;
+    }
+
+    [dir="rtl"] .inventory-summary-section .users-summary-text {
+        font-size: 0.85rem;
+    }
+
+    [dir="rtl"] .inventory-summary-section .users-summary-card {
+        grid-template-columns: minmax(0, 1fr) 2.75rem;
+    }
+
+    .inventory-stock-line {
+        gap: 0.34rem;
+        font-size: clamp(0.76rem, 0.58rem + 0.75vw, 1rem);
+    }
+
+    [dir="rtl"] .inventory-summary-section .users-summary-label {
+        font-size: 0.78rem;
+    }
+
+    [dir="rtl"] .inventory-summary-section .users-summary-meta {
+        font-size: 0.74rem;
+    }
+
+    .inventory-stock-value {
+        flex-basis: 100%;
+    }
+
+    .action-icon-btn {
+        width: 2.125rem;
+        height: 2.125rem;
+    }
+}

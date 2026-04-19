@@ -1,0 +1,5 @@
+.filters-form {
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    background: var(--color-surface-muted);
+}

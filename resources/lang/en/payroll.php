@@ -1,0 +1,68 @@
+<?php
+
+return [
+    'index' => [
+        'title' => 'Payroll',
+        'page_title' => 'Payroll',
+        'page_subtitle' => 'Monthly salary records with payment status, balances, and payroll visibility',
+        'records_title' => 'Salary Records',
+        'records_text' => 'Review payroll periods, payment progress, and outstanding salary balances.',
+    ],
+    'summary' => [
+        'total_salary' => 'Total Salary',
+        'advance_deduction' => 'Advance Deduction',
+        'paid' => 'Paid',
+        'remaining' => 'Remaining',
+        'employees_fully_paid' => 'Employees Fully Paid',
+    ],
+    'filters' => [
+        'employee' => 'Employee',
+        'all_employees' => 'All Employees',
+        'month' => 'Month',
+        'all_months' => 'All Months',
+        'year' => 'Year',
+        'all_years' => 'All Years',
+        'sort' => 'Sort',
+        'latest' => 'Latest',
+        'oldest' => 'Oldest',
+    ],
+    'table' => [
+        'employee' => 'Employee',
+        'period' => 'Period',
+        'gross' => 'Gross',
+        'advance' => 'Advance',
+        'net' => 'Net',
+        'paid' => 'Paid',
+        'remaining' => 'Remaining',
+        'status' => 'Status',
+        'actions' => 'Actions',
+    ],
+    'actions' => [
+        'create_salary_record' => 'Create Salary Record',
+        'apply_filters' => 'Apply Filters',
+        'reset' => 'Reset',
+        'view' => 'View',
+    ],
+    'statuses' => [
+        'unpaid' => 'Unpaid',
+        'partial' => 'Partial',
+        'paid' => 'Paid',
+    ],
+    'months' => [
+        'january' => 'January',
+        'february' => 'February',
+        'march' => 'March',
+        'april' => 'April',
+        'may' => 'May',
+        'june' => 'June',
+        'july' => 'July',
+        'august' => 'August',
+        'september' => 'September',
+        'october' => 'October',
+        'november' => 'November',
+        'december' => 'December',
+    ],
+    'messages' => [
+        'empty' => 'No salary records matched your filters.',
+    ],
+];

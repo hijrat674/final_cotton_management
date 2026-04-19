@@ -1,0 +1,13 @@
+.filters-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.chart-card {
+    min-height: 320px;
+}
+
+.chart-card canvas {
+    max-width: 100%;
+    max-height: 240px;
+}

@@ -1,0 +1,1102 @@
+.placeholder-dashboard,
+.placeholder-hero {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.placeholder-hero {
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, #0f172a, #17355c);
+    color: #fff;
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 1.5rem;
+}
+
+.placeholder-kicker {
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.placeholder-hero p {
+    max-width: 60ch;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+.summary-showcase,
+.summary-showcase * {
+    font-family: 'Poppins', var(--font-sans);
+}
+
+.users-summary-section,
+.inventory-summary-section {
+    padding: 1.75rem;
+    background:
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.users-summary-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.users-summary-title {
+    margin: 0 0 0.3rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #101828;
+}
+
+.users-summary-text {
+    color: #667085;
+    font-size: 0.95rem;
+}
+
+.users-summary-action {
+    border-radius: 999px;
+    padding-inline: 1rem;
+    white-space: nowrap;
+}
+
+.users-summary-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-height: 100%;
+    min-width: 0;
+    padding: 1.15rem 1.2rem;
+    border-radius: 1.1rem;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(219, 226, 234, 0.85);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.users-summary-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+    border-color: rgba(191, 219, 254, 0.95);
+}
+
+.users-summary-icon {
+    width: 3rem;
+    height: 3rem;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    font-size: 1.25rem;
+}
+
+.users-summary-copy {
+    display: grid;
+    gap: 0.2rem;
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+.users-summary-value-wrap {
+    min-width: 0;
+    width: 100%;
+}
+
+.users-summary-label {
+    color: #667085;
+    font-size: 0.88rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.users-summary-value {
+    color: #101828;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(1rem, 0.7rem + 0.9vw, 1.8rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+    font-variant-numeric: tabular-nums;
+}
+
+.users-summary-card-total .users-summary-icon {
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.12);
+}
+
+.users-summary-card-active .users-summary-icon {
+    color: #16a34a;
+    background: rgba(22, 163, 74, 0.12);
+}
+
+.users-summary-card-inactive .users-summary-icon {
+    color: #dc2626;
+    background: rgba(220, 38, 38, 0.12);
+}
+
+.users-summary-card-admin .users-summary-icon {
+    color: #7c3aed;
+    background: rgba(124, 58, 237, 0.12);
+}
+
+.users-summary-card-manager .users-summary-icon {
+    color: #b45309;
+    background: rgba(180, 83, 9, 0.12);
+}
+
+.users-summary-card-production .users-summary-icon {
+    color: #0f766e;
+    background: rgba(15, 118, 110, 0.12);
+}
+
+.users-summary-card-sales .users-summary-icon {
+    color: #db2777;
+    background: rgba(219, 39, 119, 0.12);
+}
+
+.inventory-summary-card-total .users-summary-icon {
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.12);
+}
+
+.inventory-summary-card-low .users-summary-icon {
+    color: #d97706;
+    background: rgba(217, 119, 6, 0.12);
+}
+
+.inventory-summary-card-empty .users-summary-icon {
+    color: #dc2626;
+    background: rgba(220, 38, 38, 0.12);
+}
+
+.inventory-item-summary-head {
+    margin-top: 1.75rem;
+}
+
+.inventory-item-summary-title {
+    font-size: 1.1rem;
+}
+
+.inventory-item-card .users-summary-card {
+    position: relative;
+}
+
+.inventory-item-label {
+    color: #344054;
+}
+
+.inventory-stock-line {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 0.45rem;
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
+    white-space: nowrap;
+    font-size: clamp(0.82rem, 0.56rem + 0.78vw, 1.45rem);
+    letter-spacing: 0;
+}
+
+.inventory-stock-value {
+    flex: 0 1 auto;
+    white-space: nowrap;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+.inventory-stock-unit {
+    flex: 0 0 auto;
+    margin-left: 0;
+    color: #667085;
+    font-size: 0.7em;
+    font-weight: 600;
+    letter-spacing: 0;
+    white-space: nowrap;
+}
+
+.inventory-item-card .users-summary-copy {
+    gap: 0.3rem;
+}
+
+.inventory-item-card-raw-cotton .users-summary-icon {
+    color: #16a34a;
+    background: rgba(22, 163, 74, 0.12);
+}
+
+.inventory-item-card-processed-cotton .users-summary-icon {
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.12);
+}
+
+.inventory-item-card-kernel .users-summary-icon {
+    color: #c2410c;
+    background: rgba(194, 65, 12, 0.12);
+}
+
+.inventory-item-card-cotton-oil .users-summary-icon {
+    color: #0ea5e9;
+    background: rgba(14, 165, 233, 0.12);
+}
+
+.inventory-item-card-cotton-meal .users-summary-icon {
+    color: #7c3aed;
+    background: rgba(124, 58, 237, 0.12);
+}
+
+.inventory-item-card-waste .users-summary-icon {
+    color: #dc2626;
+    background: rgba(220, 38, 38, 0.12);
+}
+
+.inventory-item-card-shell .users-summary-icon {
+    color: #0891b2;
+    background: rgba(8, 145, 178, 0.12);
+}
+
+.inventory-item-card-default .users-summary-icon {
+    color: #475467;
+    background: rgba(71, 84, 103, 0.12);
+}
+
+.cotton-summary-section {
+    padding: 1.75rem;
+    background:
+        radial-gradient(circle at top right, rgba(14, 165, 233, 0.08), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+}
+
+.cotton-summary-card-total .users-summary-icon {
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.12);
+}
+
+.cotton-summary-card-today .users-summary-icon {
+    color: #16a34a;
+    background: rgba(22, 163, 74, 0.12);
+}
+
+.cotton-summary-card-intake .users-summary-icon {
+    color: #c2410c;
+    background: rgba(194, 65, 12, 0.12);
+}
+
+.cotton-latest-block {
+    margin-top: 1.75rem;
+}
+
+.cotton-latest-card {
+    padding: 1.35rem;
+    border-radius: 1.25rem;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid rgba(219, 226, 234, 0.85);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.cotton-latest-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+    border-color: rgba(186, 230, 253, 0.95);
+}
+
+.cotton-latest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.cotton-latest-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    min-width: 0;
+    padding: 0.95rem 1rem;
+    border-radius: 1rem;
+    background: #f8fbff;
+}
+
+.cotton-latest-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.95rem;
+    background: rgba(37, 99, 235, 0.12);
+    color: #2563eb;
+    font-size: 1.05rem;
+}
+
+.cotton-latest-copy {
+    display: grid;
+    gap: 0.22rem;
+    min-width: 0;
+}
+
+.cotton-latest-label {
+    color: #667085;
+    font-size: 0.82rem;
+    font-weight: 500;
+}
+
+.cotton-latest-value {
+    color: #101828;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.cotton-latest-value-inline {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.38rem;
+    white-space: nowrap;
+}
+
+.cotton-latest-unit {
+    color: #667085;
+    font-size: 0.82em;
+    font-weight: 600;
+}
+
+.cotton-latest-empty {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cotton-latest-empty-icon {
+    width: 3rem;
+    height: 3rem;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background: rgba(148, 163, 184, 0.14);
+    color: #64748b;
+    font-size: 1.15rem;
+}
+
+.cotton-latest-empty-title {
+    margin: 0 0 0.3rem;
+    color: #101828;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.production-summary-section {
+    padding: 1.75rem;
+    background:
+        radial-gradient(circle at top right, rgba(16, 185, 129, 0.08), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #fbfefd 100%);
+}
+
+.production-summary-card-total .users-summary-icon {
+    color: #0f766e;
+    background: rgba(15, 118, 110, 0.12);
+}
+
+.production-summary-card-today .users-summary-icon {
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.12);
+}
+
+.production-summary-card-input .users-summary-icon {
+    color: #7c3aed;
+    background: rgba(124, 58, 237, 0.12);
+}
+
+.production-summary-card-output .users-summary-icon {
+    color: #16a34a;
+    background: rgba(22, 163, 74, 0.12);
+}
+
+.production-summary-card-waste .users-summary-icon {
+    color: #dc2626;
+    background: rgba(220, 38, 38, 0.12);
+}
+
+.production-summary-card-efficiency .users-summary-icon {
+    color: #d97706;
+    background: rgba(217, 119, 6, 0.12);
+}
+
+.production-summary-line {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 0.45rem;
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
+    white-space: nowrap;
+    font-size: clamp(0.82rem, 0.56rem + 0.78vw, 1.45rem);
+    letter-spacing: 0;
+}
+
+.production-summary-value {
+    flex: 0 1 auto;
+    white-space: nowrap;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+.production-summary-unit {
+    flex: 0 0 auto;
+    color: #667085;
+    font-size: 0.7em;
+    font-weight: 600;
+    letter-spacing: 0;
+    white-space: nowrap;
+}
+
+.sales-summary-section {
+    padding: 1.75rem;
+    background:
+        radial-gradient(circle at top right, rgba(14, 165, 233, 0.08), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.sales-summary-card-total .users-summary-icon {
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.12);
+}
+
+.sales-summary-card-today .users-summary-icon {
+    color: #16a34a;
+    background: rgba(22, 163, 74, 0.12);
+}
+
+.sales-summary-card-revenue .users-summary-icon {
+    color: #0f766e;
+    background: rgba(15, 118, 110, 0.12);
+}
+
+.sales-summary-card-paid .users-summary-icon {
+    color: #7c3aed;
+    background: rgba(124, 58, 237, 0.12);
+}
+
+.sales-summary-card-pending .users-summary-icon {
+    color: #d97706;
+    background: rgba(217, 119, 6, 0.12);
+}
+
+.sales-summary-card-open .users-summary-icon {
+    color: #db2777;
+    background: rgba(219, 39, 119, 0.12);
+}
+
+.sales-summary-line {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 0.45rem;
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
+    white-space: nowrap;
+    font-size: clamp(0.82rem, 0.56rem + 0.78vw, 1.45rem);
+    letter-spacing: 0;
+}
+
+.sales-summary-value {
+    flex: 0 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+.sales-summary-unit {
+    flex: 0 0 auto;
+    color: #667085;
+    font-size: 0.7em;
+    font-weight: 600;
+    letter-spacing: 0;
+    white-space: nowrap;
+}
+
+.accounting-summary-section {
+    padding: 1.75rem;
+    background:
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.accounting-summary-card-income .users-summary-icon {
+    color: #16a34a;
+    background: rgba(22, 163, 74, 0.12);
+}
+
+.accounting-summary-card-expenses .users-summary-icon {
+    color: #ea580c;
+    background: rgba(234, 88, 12, 0.12);
+}
+
+.accounting-summary-card-profit .users-summary-icon {
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.12);
+}
+
+.accounting-summary-card-loss .users-summary-icon {
+    color: #dc2626;
+    background: rgba(220, 38, 38, 0.12);
+}
+
+.accounting-summary-card-cash .users-summary-icon {
+    color: #7c3aed;
+    background: rgba(124, 58, 237, 0.12);
+}
+
+.accounting-summary-value-block {
+    display: grid;
+    gap: 0.28rem;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.accounting-summary-amount {
+    color: #101828;
+    display: block;
+    min-width: 0;
+    max-width: 100%;
+    font-size: clamp(1rem, 0.74rem + 0.85vw, 1.55rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+.accounting-summary-currency {
+    color: #667085;
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.accounting-summary-card-income .users-summary-copy,
+.accounting-summary-card-expenses .users-summary-copy,
+.accounting-summary-card-profit .users-summary-copy,
+.accounting-summary-card-loss .users-summary-copy,
+.accounting-summary-card-cash .users-summary-copy {
+    gap: 0.3rem;
+}
+
+.employee-summary-section {
+    padding: 1.75rem;
+    background:
+        radial-gradient(circle at top right, rgba(14, 165, 233, 0.08), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+}
+
+.employee-summary-card-total .users-summary-icon {
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.12);
+}
+
+.employee-summary-card-active .users-summary-icon {
+    color: #16a34a;
+    background: rgba(22, 163, 74, 0.12);
+}
+
+.employee-summary-card-inactive .users-summary-icon {
+    color: #dc2626;
+    background: rgba(220, 38, 38, 0.12);
+}
+
+.employee-summary-card-departments .users-summary-icon {
+    color: #7c3aed;
+    background: rgba(124, 58, 237, 0.12);
+}
+
+.employee-summary-breakdown {
+    margin-top: 1.75rem;
+}
+
+.employee-distribution-card .users-summary-icon {
+    color: #0f766e;
+    background: rgba(15, 118, 110, 0.12);
+}
+
+.employee-distribution-label {
+    color: #344054;
+}
+
+.employee-distribution-card .users-summary-copy {
+    gap: 0.3rem;
+}
+
+.employee-summary-empty {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.15rem 1.25rem;
+    border-radius: 1.1rem;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(219, 226, 234, 0.85);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+}
+
+.employee-summary-empty-icon {
+    width: 3rem;
+    height: 3rem;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background: rgba(148, 163, 184, 0.14);
+    color: #64748b;
+    font-size: 1.15rem;
+}
+
+.employee-summary-empty-title {
+    margin: 0 0 0.3rem;
+    color: #101828;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.payroll-summary-section {
+    padding: 1.75rem;
+    background:
+        radial-gradient(circle at top right, rgba(99, 102, 241, 0.08), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #fafcff 100%);
+}
+
+.payroll-summary-card-paid .users-summary-icon {
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.12);
+}
+
+.payroll-summary-card-unpaid .users-summary-icon {
+    color: #d97706;
+    background: rgba(217, 119, 6, 0.12);
+}
+
+.payroll-summary-card-employees .users-summary-icon {
+    color: #16a34a;
+    background: rgba(22, 163, 74, 0.12);
+}
+
+.payroll-summary-value-block {
+    display: grid;
+    gap: 0.28rem;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.payroll-summary-amount {
+    color: #101828;
+    display: block;
+    min-width: 0;
+    max-width: 100%;
+    font-size: clamp(1rem, 0.74rem + 0.85vw, 1.55rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+.payroll-summary-currency {
+    color: #667085;
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.payroll-summary-card-paid .users-summary-copy,
+.payroll-summary-card-unpaid .users-summary-copy,
+.payroll-summary-card-employees .users-summary-copy {
+    gap: 0.3rem;
+}
+
+.payroll-chart-grid {
+    margin-top: 1.75rem;
+}
+
+.payroll-chart-panel {
+    min-height: 100%;
+    padding: 1.35rem;
+    border-radius: 1.25rem;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, #f8fbff 100%);
+    border: 1px solid rgba(219, 226, 234, 0.85);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+}
+
+.payroll-chart-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.payroll-chart-title {
+    margin: 0 0 0.35rem;
+    color: #101828;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.payroll-chart-text {
+    color: #667085;
+    font-size: 0.9rem;
+}
+
+.payroll-chart-badge {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.38rem 0.72rem;
+    border-radius: 999px;
+    background: rgba(37, 99, 235, 0.08);
+    color: #2563eb;
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.payroll-chart-canvas-wrap {
+    position: relative;
+    min-width: 0;
+    width: 100%;
+}
+
+.payroll-chart-canvas-wrap-lg {
+    height: 320px;
+}
+
+.payroll-chart-canvas-wrap-md {
+    height: 320px;
+}
+
+.payroll-chart-canvas-wrap canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.advance-summary-section {
+    padding: 1.75rem;
+    background:
+        radial-gradient(circle at top right, rgba(239, 68, 68, 0.08), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #fffafb 100%);
+}
+
+.advance-summary-card-total .users-summary-icon {
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.12);
+}
+
+.advance-summary-card-pending .users-summary-icon {
+    color: #d97706;
+    background: rgba(217, 119, 6, 0.12);
+}
+
+.advance-summary-card-deducted .users-summary-icon {
+    color: #16a34a;
+    background: rgba(22, 163, 74, 0.12);
+}
+
+.advance-summary-value-block {
+    display: grid;
+    gap: 0.28rem;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.advance-summary-amount {
+    color: #101828;
+    display: block;
+    min-width: 0;
+    max-width: 100%;
+    font-size: clamp(1rem, 0.74rem + 0.85vw, 1.55rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+.advance-summary-currency {
+    color: #667085;
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.advance-summary-card-total .users-summary-copy,
+.advance-summary-card-pending .users-summary-copy,
+.advance-summary-card-deducted .users-summary-copy {
+    gap: 0.3rem;
+}
+
+.advance-chart-grid {
+    margin-top: 1.75rem;
+}
+
+.advance-chart-panel {
+    min-height: 100%;
+    padding: 1.35rem;
+    border-radius: 1.25rem;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, #fff8f8 100%);
+    border: 1px solid rgba(219, 226, 234, 0.85);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+}
+
+.advance-chart-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.advance-chart-title {
+    margin: 0 0 0.35rem;
+    color: #101828;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.advance-chart-text {
+    color: #667085;
+    font-size: 0.9rem;
+}
+
+.advance-chart-badge {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.38rem 0.72rem;
+    border-radius: 999px;
+    background: rgba(239, 68, 68, 0.08);
+    color: #ef4444;
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.advance-chart-canvas-wrap {
+    position: relative;
+    min-width: 0;
+    width: 100%;
+}
+
+.advance-chart-canvas-wrap-lg {
+    height: 320px;
+}
+
+.advance-chart-canvas-wrap-md {
+    height: 320px;
+}
+
+.advance-chart-canvas-wrap canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.expenses-summary-section {
+    padding: 1.75rem;
+    background:
+        radial-gradient(circle at top right, rgba(249, 115, 22, 0.08), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #fffaf5 100%);
+}
+
+.expenses-summary-card-count .users-summary-icon {
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.12);
+}
+
+.expenses-summary-card-total .users-summary-icon {
+    color: #c2410c;
+    background: rgba(194, 65, 12, 0.12);
+}
+
+.expenses-summary-card-today .users-summary-icon {
+    color: #16a34a;
+    background: rgba(22, 163, 74, 0.12);
+}
+
+.expenses-summary-card-month .users-summary-icon {
+    color: #7c3aed;
+    background: rgba(124, 58, 237, 0.12);
+}
+
+.expense-summary-line {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 0.35rem;
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
+    white-space: nowrap;
+    font-size: clamp(0.9rem, 0.64rem + 0.78vw, 1.45rem);
+    letter-spacing: 0;
+}
+
+.expense-summary-value {
+    flex: 0 1 auto;
+    white-space: nowrap;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.expense-distribution-card .users-summary-icon {
+    color: #db2777;
+    background: rgba(219, 39, 119, 0.12);
+}
+
+.expense-distribution-label {
+    color: #344054;
+}
+
+@media (max-width: 1199.98px) {
+    .inventory-stock-line {
+        font-size: clamp(0.78rem, 0.54rem + 0.72vw, 1.15rem);
+    }
+
+    .production-summary-line {
+        font-size: clamp(0.78rem, 0.54rem + 0.72vw, 1.15rem);
+    }
+
+    .sales-summary-line {
+        font-size: clamp(0.78rem, 0.54rem + 0.72vw, 1.15rem);
+    }
+
+    .expense-summary-line {
+        font-size: clamp(0.82rem, 0.58rem + 0.72vw, 1.15rem);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .users-summary-section,
+    .inventory-summary-section,
+    .cotton-summary-section,
+    .production-summary-section,
+    .sales-summary-section,
+    .accounting-summary-section,
+    .employee-summary-section,
+    .payroll-summary-section,
+    .advance-summary-section,
+    .expenses-summary-section {
+        padding: 1.25rem;
+    }
+
+    .users-summary-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .users-summary-action {
+        align-self: flex-start;
+    }
+
+    .users-summary-card {
+        padding: 1rem;
+    }
+
+    .inventory-stock-line {
+        gap: 0.34rem;
+        font-size: clamp(0.76rem, 0.58rem + 0.75vw, 1rem);
+    }
+
+    .production-summary-line {
+        gap: 0.34rem;
+        font-size: clamp(0.76rem, 0.58rem + 0.75vw, 1rem);
+    }
+
+    .sales-summary-line {
+        gap: 0.34rem;
+        font-size: clamp(0.76rem, 0.58rem + 0.75vw, 1rem);
+    }
+
+    .expense-summary-line {
+        gap: 0.3rem;
+        font-size: clamp(0.76rem, 0.58rem + 0.75vw, 1rem);
+    }
+
+    .cotton-latest-card {
+        padding: 1rem;
+    }
+
+    .employee-summary-empty {
+        padding: 1rem;
+        align-items: flex-start;
+    }
+
+    .payroll-chart-panel {
+        padding: 1rem;
+    }
+
+    .payroll-chart-head {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .payroll-chart-badge {
+        align-self: flex-start;
+    }
+
+    .payroll-chart-canvas-wrap-lg,
+    .payroll-chart-canvas-wrap-md {
+        height: 260px;
+    }
+
+    .advance-chart-panel {
+        padding: 1rem;
+    }
+
+    .advance-chart-head {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .advance-chart-badge {
+        align-self: flex-start;
+    }
+
+    .advance-chart-canvas-wrap-lg,
+    .advance-chart-canvas-wrap-md {
+        height: 260px;
+    }
+
+    .cotton-latest-grid {
+        grid-template-columns: 1fr;
+    }
+}

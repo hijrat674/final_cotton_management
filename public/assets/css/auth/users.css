@@ -1,0 +1,102 @@
+.filters-form {
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    background: var(--color-surface-muted);
+}
+
+.detail-card {
+    height: 100%;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.detail-label {
+    display: block;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+}
+
+.detail-value {
+    font-weight: 600;
+}
+
+.action-icon-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+}
+
+.action-icon-btn i {
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+.password-field {
+    position: relative;
+}
+
+.password-field .form-control {
+    padding-inline-end: 3.5rem;
+}
+
+.password-field .password-toggle {
+    right: auto;
+    left: auto;
+    inset-inline-end: 0.85rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 2.25rem;
+    height: 2.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 999px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.password-field .password-toggle-icon {
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+[dir="rtl"] .password-field .form-control {
+    padding-inline-end: 0.75rem;
+    padding-inline-start: 3.5rem;
+}
+
+[dir="rtl"] .password-field .password-toggle {
+    inset-inline-end: auto;
+    inset-inline-start: 0.85rem;
+}
+
+@media (max-width: 767.98px) {
+    .table-actions {
+        justify-content: flex-start;
+    }
+
+    .action-icon-btn {
+        width: 2.125rem;
+        height: 2.125rem;
+    }
+
+    .password-field .form-control {
+        padding-inline-end: 3.25rem;
+    }
+
+    [dir="rtl"] .password-field .form-control {
+        padding-inline-end: 0.75rem;
+        padding-inline-start: 3.25rem;
+    }
+}

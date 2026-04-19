@@ -1,0 +1,66 @@
+.detail-card {
+    height: 100%;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.95rem 1rem;
+}
+
+.detail-item {
+    padding: 0.85rem 0.95rem;
+    border-radius: var(--radius-md);
+    background: rgba(247, 250, 255, 0.85);
+    border: 1px solid rgba(219, 226, 234, 0.7);
+}
+
+.detail-label {
+    display: block;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 0.45rem;
+}
+
+.detail-value {
+    font-weight: 600;
+}
+
+.notes-panel {
+    padding: 1rem 1.05rem;
+    border-radius: var(--radius-md);
+    background: var(--color-surface-muted);
+}
+
+.expense-amount-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    border-radius: 999px;
+    background: rgba(31, 111, 235, 0.12);
+    color: var(--color-primary-dark);
+    font-weight: 700;
+}
+
+.expense-detail-header {
+    align-items: flex-start;
+}
+
+.expense-action-row {
+    align-items: center;
+}
+
+[dir="rtl"] .expense-page-shell {
+    text-align: right;
+}
+
+[dir="rtl"] .expense-page-shell .detail-item,
+[dir="rtl"] .expense-page-shell .notes-panel,
+[dir="rtl"] .expense-page-shell .section-title,
+[dir="rtl"] .expense-page-shell .section-text {
+    text-align: right;
+}
+
+[dir="rtl"] .expense-detail-header {
+    align-items: stretch;
+}

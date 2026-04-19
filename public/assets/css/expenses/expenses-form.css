@@ -1,0 +1,62 @@
+.form-card {
+    max-width: 1080px;
+}
+
+.expense-page-shell {
+    min-width: 0;
+}
+
+.expense-form-card {
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(219, 226, 234, 0.75);
+    background: #fff;
+    box-shadow: var(--shadow-card);
+}
+
+.expense-form-help {
+    background: linear-gradient(180deg, rgba(31, 111, 235, 0.08), rgba(31, 111, 235, 0.02));
+}
+
+.expense-form-card .form-label {
+    display: inline-block;
+    margin-bottom: 0.85rem;
+}
+
+.expense-form-card .form-text,
+.expense-form-card .invalid-feedback {
+    margin-top: 0.55rem;
+}
+
+.expense-guidance-list {
+    padding-left: 1.1rem;
+    color: var(--color-text-muted);
+}
+
+.expense-guidance-list li + li {
+    margin-top: 0.65rem;
+}
+
+.expense-action-row {
+    align-items: center;
+}
+
+[dir="rtl"] .expense-page-shell {
+    text-align: right;
+}
+
+[dir="rtl"] .expense-page-shell .breadcrumb {
+    justify-content: flex-start;
+}
+
+[dir="rtl"] .expense-page-shell .form-label,
+[dir="rtl"] .expense-page-shell .form-text,
+[dir="rtl"] .expense-page-shell .section-title,
+[dir="rtl"] .expense-page-shell .section-text {
+    text-align: right;
+}
+
+[dir="rtl"] .expense-guidance-list {
+    padding-left: 0;
+    padding-right: 1.1rem;
+}

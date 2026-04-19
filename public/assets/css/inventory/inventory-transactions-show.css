@@ -1,0 +1,56 @@
+.detail-card {
+    height: 100%;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.detail-label {
+    display: block;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+}
+
+.detail-value {
+    font-weight: 600;
+}
+
+.notes-panel {
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    background: var(--color-surface-muted);
+}
+
+.snapshot-list {
+    display: grid;
+    gap: 0.9rem;
+}
+
+.snapshot-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.transaction-net {
+    min-width: 7rem;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.transaction-net.is-in {
+    background: rgba(15, 157, 88, 0.12);
+    color: #0b6e3f;
+}
+
+.transaction-net.is-out {
+    background: rgba(217, 48, 37, 0.12);
+    color: #b42318;
+}

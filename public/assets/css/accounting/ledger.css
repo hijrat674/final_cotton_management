@@ -1,0 +1,10 @@
+.ledger-balance {
+    padding: 0.65rem 0.9rem;
+    border-radius: var(--radius-md);
+    background: var(--color-surface-muted);
+    font-weight: 700;
+}
+
+.ledger-card + .ledger-card {
+    margin-top: 1rem;
+}

@@ -1,0 +1,27 @@
+.payroll-hero-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(219, 226, 234, 0.8);
+    background: linear-gradient(140deg, #fff, #eef7ff);
+}
+
+.payroll-kicker {
+    display: inline-block;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 991.98px) {
+    .payroll-hero-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

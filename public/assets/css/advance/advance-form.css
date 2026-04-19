@@ -1,0 +1,13 @@
+.payroll-form-card .summary-breakdown strong {
+    color: var(--color-text);
+}
+
+.payroll-form-card .form-control:focus,
+.payroll-form-card .form-select:focus {
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15);
+}
+
+.payroll-summary-card {
+    position: sticky;
+    top: 1rem;
+}

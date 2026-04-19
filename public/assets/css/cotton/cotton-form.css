@@ -1,0 +1,8 @@
+.form-card {
+    max-width: 1040px;
+}
+
+.net-weight-field {
+    background: linear-gradient(180deg, #f8fafc, #eef4ff);
+    font-weight: 700;
+}

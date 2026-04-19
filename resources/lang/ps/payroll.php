@@ -1,0 +1,68 @@
+<?php
+
+return [
+    'index' => [
+        'title' => 'تنخوا',
+        'page_title' => 'تنخوا',
+        'page_subtitle' => 'میاشتني د معاش ریکارډونه د تادیې حالت، بیلانسونو او د معاش د لید سره',
+        'records_title' => 'د معاش ریکارډونه',
+        'records_text' => 'د معاش دورې، د تادیې پرمختګ او د معاش پاتې بیلانسونه وڅېړئ.',
+    ],
+    'summary' => [
+        'total_salary' => 'ټول معاش',
+        'advance_deduction' => 'د پیشکي کسر',
+        'paid' => 'تادیه شوی',
+        'remaining' => 'پاتې',
+        'employees_fully_paid' => 'بشپړ تادیه شوي کارکوونکي',
+    ],
+    'filters' => [
+        'employee' => 'کارکوونکی',
+        'all_employees' => 'ټول کارکوونکي',
+        'month' => 'میاشت',
+        'all_months' => 'ټولې میاشتې',
+        'year' => 'کال',
+        'all_years' => 'ټول کلونه',
+        'sort' => 'ترتیب',
+        'latest' => 'وروستي',
+        'oldest' => 'تر ټولو زاړه',
+    ],
+    'table' => [
+        'employee' => 'کارکوونکی',
+        'period' => 'دوره',
+        'gross' => 'ناخالص',
+        'advance' => 'پیشکي',
+        'net' => 'خالص',
+        'paid' => 'تادیه شوی',
+        'remaining' => 'پاتې',
+        'status' => 'حالت',
+        'actions' => 'کړنې',
+    ],
+    'actions' => [
+        'create_salary_record' => 'د معاش ریکارډ جوړ کړئ',
+        'apply_filters' => 'فلټرونه پلي کړئ',
+        'reset' => 'بیا تنظیم',
+        'view' => 'کتل',
+    ],
+    'statuses' => [
+        'unpaid' => 'نه دی ورکړل شوی',
+        'partial' => 'جزوي',
+        'paid' => 'ورکړل شوی',
+    ],
+    'months' => [
+        'january' => 'جنوري',
+        'february' => 'فبروري',
+        'march' => 'مارچ',
+        'april' => 'اپرېل',
+        'may' => 'می',
+        'june' => 'جون',
+        'july' => 'جولای',
+        'august' => 'اګست',
+        'september' => 'سپتمبر',
+        'october' => 'اکتوبر',
+        'november' => 'نومبر',
+        'december' => 'دسمبر',
+    ],
+    'messages' => [
+        'empty' => 'ستاسو له فلټرونو سره هېڅ د معاش ریکارډ برابر نه و.',
+    ],
+];

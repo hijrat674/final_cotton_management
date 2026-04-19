@@ -1,0 +1,19 @@
+:root {
+    --font-sans: 'Public Sans', 'Segoe UI', sans-serif;
+    --color-primary: #1f6feb;
+    --color-primary-dark: #174ea6;
+    --color-accent: #0f766e;
+    --color-surface: #ffffff;
+    --color-surface-muted: #f5f7fb;
+    --color-border: #dbe2ea;
+    --color-text: #14213d;
+    --color-text-muted: #667085;
+    --color-success: #0f9d58;
+    --color-danger: #d93025;
+    --color-warning: #f59e0b;
+    --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.08);
+    --shadow-card: 0 10px 30px rgba(15, 23, 42, 0.06);
+    --radius-lg: 1.25rem;
+    --radius-md: 0.9rem;
+    --radius-sm: 0.65rem;
+}
