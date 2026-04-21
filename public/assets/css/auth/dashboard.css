@@ -103,9 +103,24 @@
     flex: 1 1 auto;
 }
 
+.inventory-summary-copy {
+    grid-template-rows: auto auto;
+    align-content: start;
+    gap: 0.32rem;
+}
+
+.inventory-summary-heading,
+.inventory-summary-value-wrap {
+    min-width: 0;
+}
+
 .users-summary-value-wrap {
     min-width: 0;
     width: 100%;
+}
+
+.inventory-summary-value-wrap {
+    overflow: hidden;
 }
 
 .users-summary-label {
@@ -121,13 +136,14 @@
     width: 100%;
     max-width: 100%;
     font-size: clamp(1rem, 0.7rem + 0.9vw, 1.8rem);
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.1;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.01em;
     white-space: nowrap;
     overflow: visible;
     text-overflow: clip;
     font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1, "lnum" 1;
 }
 
 .users-summary-card-total .users-summary-icon {
@@ -194,36 +210,54 @@
 
 .inventory-item-label {
     color: #344054;
+    display: block;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+.inventory-summary-value {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    line-height: 1.05;
 }
 
 .inventory-stock-line {
-    display: inline-flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: baseline;
-    justify-content: flex-start;
-    gap: 0.45rem;
-    width: auto;
+    justify-content: stretch;
+    column-gap: 0.45rem;
+    width: 100%;
     min-width: 0;
     max-width: 100%;
-    white-space: nowrap;
     font-size: clamp(0.82rem, 0.56rem + 0.78vw, 1.45rem);
     letter-spacing: 0;
+    direction: ltr;
+    overflow: hidden;
 }
 
 .inventory-stock-value {
-    flex: 0 1 auto;
+    display: block;
+    min-width: 0;
     white-space: nowrap;
-    font-weight: 700;
-    letter-spacing: -0.04em;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1, "lnum" 1;
+    overflow: hidden;
+    text-overflow: clip;
 }
 
 .inventory-stock-unit {
-    flex: 0 0 auto;
-    margin-left: 0;
+    display: inline-flex;
+    align-items: baseline;
     color: #667085;
     font-size: 0.7em;
     font-weight: 600;
     letter-spacing: 0;
     white-space: nowrap;
+    min-width: max-content;
+    line-height: 1.1;
 }
 
 .inventory-item-card .users-summary-copy {
@@ -986,6 +1020,105 @@
     color: #344054;
 }
 
+[dir="rtl"] .placeholder-dashboard,
+[dir="rtl"] .placeholder-hero,
+[dir="rtl"] .summary-showcase,
+[dir="rtl"] .summary-showcase .content-card,
+[dir="rtl"] .users-summary-copy,
+[dir="rtl"] .cotton-latest-copy,
+[dir="rtl"] .accounting-summary-value-block,
+[dir="rtl"] .payroll-summary-value-block,
+[dir="rtl"] .advance-summary-value-block {
+    text-align: right;
+}
+
+[dir="rtl"] .users-summary-header,
+[dir="rtl"] .payroll-chart-head,
+[dir="rtl"] .advance-chart-head {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .users-summary-action,
+[dir="rtl"] .payroll-chart-badge,
+[dir="rtl"] .advance-chart-badge {
+    align-self: flex-end;
+}
+
+[dir="rtl"] .users-summary-card,
+[dir="rtl"] .cotton-latest-item,
+[dir="rtl"] .employee-summary-empty {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .users-summary-card .users-summary-icon,
+[dir="rtl"] .cotton-latest-icon,
+[dir="rtl"] .employee-summary-empty-icon {
+    order: 2;
+}
+
+[dir="rtl"] .users-summary-card .users-summary-copy,
+[dir="rtl"] .cotton-latest-copy,
+[dir="rtl"] .employee-summary-empty-copy {
+    order: 1;
+}
+
+[dir="rtl"] .inventory-stock-line,
+[dir="rtl"] .production-summary-line,
+[dir="rtl"] .sales-summary-line,
+[dir="rtl"] .expense-summary-line,
+[dir="rtl"] .cotton-latest-value-inline,
+[dir="rtl"] .accounting-summary-amount,
+[dir="rtl"] .payroll-summary-amount,
+[dir="rtl"] .advance-summary-amount {
+    direction: ltr;
+    unicode-bidi: plaintext;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+[dir="rtl"] .inventory-stock-unit,
+[dir="rtl"] .production-summary-unit,
+[dir="rtl"] .sales-summary-unit,
+[dir="rtl"] .cotton-latest-unit,
+[dir="rtl"] .accounting-summary-currency,
+[dir="rtl"] .payroll-summary-currency,
+[dir="rtl"] .advance-summary-currency {
+    direction: ltr;
+    unicode-bidi: plaintext;
+}
+
+[dir="rtl"] .inventory-summary-section .inventory-summary-copy {
+    gap: 0.28rem;
+}
+
+[dir="rtl"] .inventory-summary-section .users-summary-label {
+    line-height: 1.55;
+}
+
+[dir="rtl"] .inventory-summary-section .inventory-summary-value {
+    font-size: clamp(0.92rem, 0.62rem + 0.56vw, 1.22rem);
+    line-height: 1.08;
+}
+
+[dir="rtl"] .inventory-summary-section .inventory-item-label {
+    font-size: 0.84rem;
+    line-height: 1.5;
+}
+
+[dir="rtl"] .cotton-latest-empty {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+[dir="rtl"] .cotton-latest-grid,
+[dir="rtl"] .payroll-chart-grid,
+[dir="rtl"] .advance-chart-grid,
+[dir="rtl"] .employee-summary-breakdown,
+[dir="rtl"] .inventory-item-summary-head,
+[dir="rtl"] .cotton-latest-block {
+    direction: rtl;
+}
+
 @media (max-width: 1199.98px) {
     .inventory-stock-line {
         font-size: clamp(0.78rem, 0.54rem + 0.72vw, 1.15rem);
@@ -1027,13 +1160,32 @@
         align-self: flex-start;
     }
 
+    [dir="rtl"] .users-summary-action,
+    [dir="rtl"] .payroll-chart-badge,
+    [dir="rtl"] .advance-chart-badge {
+        align-self: flex-end;
+    }
+
     .users-summary-card {
         padding: 1rem;
     }
 
     .inventory-stock-line {
-        gap: 0.34rem;
+        column-gap: 0.34rem;
         font-size: clamp(0.76rem, 0.58rem + 0.75vw, 1rem);
+    }
+
+    .inventory-stock-line {
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 0.15rem;
+    }
+
+    .inventory-stock-unit {
+        justify-self: start;
+    }
+
+    [dir="rtl"] .inventory-stock-unit {
+        justify-self: end;
     }
 
     .production-summary-line {
@@ -1060,6 +1212,14 @@
         align-items: flex-start;
     }
 
+    [dir="rtl"] .users-summary-header,
+    [dir="rtl"] .payroll-chart-head,
+    [dir="rtl"] .advance-chart-head,
+    [dir="rtl"] .employee-summary-empty,
+    [dir="rtl"] .cotton-latest-empty {
+        text-align: right;
+    }
+
     .payroll-chart-panel {
         padding: 1rem;
     }
@@ -1071,6 +1231,11 @@
 
     .payroll-chart-badge {
         align-self: flex-start;
+    }
+
+    [dir="rtl"] .payroll-chart-badge,
+    [dir="rtl"] .advance-chart-badge {
+        align-self: flex-end;
     }
 
     .payroll-chart-canvas-wrap-lg,

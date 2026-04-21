@@ -24,7 +24,7 @@
         @include('employees.partials.form', ['employee' => $employee])
         <div class="d-flex flex-wrap gap-2 mt-4">
             <button type="submit" class="btn btn-primary">{{ __('employees.actions.update') }}</button>
-            <a href="{{ route('employees.show', $employee) }}" class="btn btn-outline-secondary">{{ __('employees.actions.cancel') }}</a>
+            @include('layouts.partials.back-button', ['fallback' => route('employees.show', $employee)])
         </div>
     </form>
 @endsection

@@ -20,17 +20,16 @@
     <div class="content-card form-card">
         <div class="mb-4">
             <h2 class="section-title mb-1">New Stock Movement</h2>
-            <p class="section-text mb-0">Every stock change is recorded here so current stock remains fully traceable and derived from the ledger.</p>
         </div>
 
         <form method="POST" action="{{ route('inventory-transactions.store') }}" data-transaction-form>
             @csrf
             @include('inventory_transactions.partials.form')
 
-            <div class="d-flex flex-wrap gap-2 mt-4">
-                <button type="submit" class="btn btn-primary">Record Transaction</button>
-                <a href="{{ route('inventory-transactions.index') }}" class="btn btn-outline-secondary">Cancel</a>
-            </div>
+        <div class="d-flex flex-wrap gap-2 mt-4">
+            <button type="submit" class="btn btn-primary">Record Transaction</button>
+            @include('layouts.partials.back-button', ['fallback' => route('inventory-transactions.index')])
+        </div>
         </form>
     </div>
 @endsection

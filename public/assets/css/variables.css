@@ -1,8 +1,13 @@
 :root {
     --font-sans: 'Public Sans', 'Segoe UI', sans-serif;
-    --color-primary: #1f6feb;
-    --color-primary-dark: #174ea6;
-    --color-accent: #0f766e;
+    --primary-color: #225439;
+    --primary-color-hover: #1b4332;
+    --primary-color-rgb: 34, 84, 57;
+    --primary-color-soft: rgba(34, 84, 57, 0.12);
+    --primary-color-soft-strong: rgba(34, 84, 57, 0.2);
+    --color-primary: var(--primary-color);
+    --color-primary-dark: var(--primary-color-hover);
+    --color-accent: var(--primary-color-hover);
     --color-surface: #ffffff;
     --color-surface-muted: #f5f7fb;
     --color-border: #dbe2ea;
@@ -16,4 +21,15 @@
     --radius-lg: 1.25rem;
     --radius-md: 0.9rem;
     --radius-sm: 0.65rem;
+    --bs-primary: var(--primary-color);
+    --bs-primary-rgb: var(--primary-color-rgb);
+    --bs-link-color: var(--primary-color);
+    --bs-link-color-rgb: var(--primary-color-rgb);
+    --bs-link-hover-color: var(--primary-color-hover);
+    --bs-link-hover-color-rgb: 27, 67, 50;
+    --bs-focus-ring-color: rgba(var(--primary-color-rgb), 0.25);
+    --bs-primary-text-emphasis: var(--primary-color-hover);
+    --bs-primary-bg-subtle: rgba(var(--primary-color-rgb), 0.12);
+    --bs-primary-border-subtle: rgba(var(--primary-color-rgb), 0.24);
+    --bs-highlight-bg: rgba(var(--primary-color-rgb), 0.18);
 }

@@ -20,7 +20,6 @@
     <div class="content-card form-card">
         <div class="mb-4">
             <h2 class="section-title mb-1">New Production Stage</h2>
-            <p class="section-text mb-0">This posting will deduct source stock, add output stock, and automatically create the linked production expense.</p>
         </div>
 
         <form method="POST" action="{{ route('production-stages.store') }}" data-production-stage-form>
@@ -32,10 +31,7 @@
                     <i class="bi bi-save me-1"></i>
                     Save Production Stage
                 </button>
-                <a href="{{ route('production-stages.index') }}" class="btn btn-outline-secondary">
-                    <i class="bi bi-x-circle me-1"></i>
-                    Cancel
-                </a>
+                @include('layouts.partials.back-button', ['fallback' => route('production-stages.index')])
             </div>
         </form>
     </div>

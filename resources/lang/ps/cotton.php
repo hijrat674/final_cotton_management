@@ -2,8 +2,8 @@
 
 return [
     'index' => [
-        'title' => 'د پنبې داخلونې',
-        'page_title' => 'د پنبې داخلونې',
+        'title' => 'د پنبې داخلول',
+        'page_title' => 'د پنبې داخلول',
         'page_subtitle' => 'د لاریو د داخلېدو ریکارډونه چې د ګدام د داخلېدو سټاک سره همغږي شوي دي',
         'register_title' => 'د لاریو د داخلېدو نوملړ',
         'register_text' => 'راتلونکې لاري، د هغوی داخلونې، او هغه سټاک ولټوئ او وڅېړئ چې ګدام ته یې زیات کړی دی.',
@@ -26,7 +26,7 @@ return [
         'material_category' => 'د موادو کټګوري',
         'net_weight' => 'خالص وزن',
         'created_by' => 'جوړوونکی',
-        'actions' => 'کړنې',
+        'actions' => 'کارونه',
     ],
     'fields' => [
         'truck_number' => 'د لارۍ شمېره',
@@ -34,7 +34,7 @@ return [
         'driver_name' => 'د موټرچلوونکي نوم',
         'driver_phone' => 'د موټرچلوونکي ټیلیفون',
         'gross_weight' => 'عمومي وزن',
-        'tare_weight' => 'د تش وزن',
+        'tare_weight' => 'د موټر وزن',
         'net_weight' => 'خالص وزن',
         'entry_date' => 'د داخلېدو نېټه',
         'notes' => 'یادښتونه',
@@ -42,10 +42,10 @@ return [
         'inventory_reference' => 'د ګدام حواله',
     ],
     'actions' => [
-        'new_entry' => 'د پنبې نوې داخلونه',
-        'apply_filters' => 'فلټرونه پلي کړئ',
+        'new_entry' => 'د پنبې نوې داخلول',
+        'apply_filters' => 'فلټرونه اجر کړئ',
         'reset' => 'بیا تنظیم',
-        'edit' => 'سمون',
+        'edit' => 'سمول',
         'edit_entry' => 'داخلونه سمول',
         'delete_entry' => 'داخلونه حذفول',
         'update' => 'د پنبې داخلونه تازه کول',

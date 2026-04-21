@@ -72,6 +72,7 @@
                 </div>
 
                 <div class="d-flex flex-wrap gap-2 mt-4">
+                    @include('layouts.partials.back-button', ['fallback' => route('cotton-entries.index')])
                     @if($canManageEntries)
                         <a href="{{ route('cotton-entries.edit', $entry) }}" class="btn btn-primary">
                             <i class="bi bi-pencil-square me-1"></i>

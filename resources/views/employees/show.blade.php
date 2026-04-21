@@ -24,6 +24,7 @@
             <p class="text-muted mb-0">{{ $employee->position }} - {{ $employee->department }}</p>
         </div>
         <div class="d-flex flex-wrap gap-2">
+            @include('layouts.partials.back-button', ['fallback' => route('employees.index')])
             @include('employees.partials.status-badge', ['employee' => $employee])
             @if($canManageEmployees)
                 <a href="{{ route('employees.edit', $employee) }}" class="btn btn-outline-primary">{{ __('employees.actions.edit') }}</a>

@@ -1,6 +1,7 @@
 @php
     $layoutLocale = $currentLocale ?? app()->getLocale();
     $layoutDirection = in_array($layoutLocale, ['ps', 'fa'], true) ? 'rtl' : 'ltr';
+    $isModalRequest = request()->boolean('modal');
 @endphp
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', $layoutLocale) }}" dir="{{ $layoutDirection }}">
@@ -17,19 +18,29 @@
     @include('layouts.partials.frontend-head-assets')
     @stack('styles')
 </head>
-<body class="admin-body {{ $layoutDirection === 'rtl' ? 'rtl' : 'ltr' }}">
-    <div class="app-shell" id="appShell">
-        @include('layouts.partials.sidebar')
+<body class="admin-body {{ $layoutDirection === 'rtl' ? 'rtl' : 'ltr' }}{{ $isModalRequest ? ' modal-page-body' : '' }}">
+    @if($isModalRequest)
+        <main class="modal-page-shell">
+            @include('layouts.partials.alerts')
+            @yield('content')
+        </main>
+    @else
+        <div class="app-shell" id="appShell">
+            @include('layouts.partials.sidebar')
 
-        <div class="app-content">
-            @include('layouts.partials.navbar')
+            <div class="app-content">
+                <button class="btn btn-light sidebar-mobile-toggle d-lg-none" type="button" data-sidebar-toggle aria-label="{{ __('app.menu') }}">
+                    {{ __('app.menu') }}
+                </button>
 
-            <main class="page-content">
-                @include('layouts.partials.alerts')
-                @yield('content')
-            </main>
+                <main class="page-content">
+                    @include('layouts.partials.alerts')
+                    @yield('content')
+                </main>
+            </div>
         </div>
-    </div>
+        @include('layouts.partials.action-modal')
+    @endif
 
     @include('layouts.partials.frontend-body-assets')
     @stack('scripts')

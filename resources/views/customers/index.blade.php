@@ -47,7 +47,13 @@
                 <p class="section-text mb-0">{{ __('customers.index.directory_text') }}</p>
             </div>
             @if($canManageCustomers)
-                <a href="{{ route('customers.create') }}" class="btn btn-primary">{{ __('customers.actions.new') }}</a>
+                <a
+                    href="{{ route('customers.create') }}"
+                    class="btn btn-primary"
+                    data-modal-open
+                    data-modal-size="xl"
+                    data-modal-title="{{ __('customers.actions.new') }}"
+                >{{ __('customers.actions.new') }}</a>
             @endif
         </div>
 
@@ -105,9 +111,21 @@
                             </td>
                             <td class="text-end">
                                 <div class="table-actions">
-                                    <a href="{{ route('customers.show', $customer) }}" class="btn btn-sm btn-outline-primary">{{ __('customers.actions.view') }}</a>
+                                    <a
+                                        href="{{ route('customers.show', $customer) }}"
+                                        class="btn btn-sm btn-outline-primary"
+                                        data-modal-open
+                                        data-modal-size="lg"
+                                        data-modal-title="{{ __('customers.actions.view') }}"
+                                    >{{ __('customers.actions.view') }}</a>
                                     @if($canManageCustomers)
-                                        <a href="{{ route('customers.edit', $customer) }}" class="btn btn-sm btn-outline-secondary">{{ __('customers.actions.edit') }}</a>
+                                        <a
+                                            href="{{ route('customers.edit', $customer) }}"
+                                            class="btn btn-sm btn-outline-secondary"
+                                            data-modal-open
+                                            data-modal-size="xl"
+                                            data-modal-title="{{ __('customers.actions.edit') }}"
+                                        >{{ __('customers.actions.edit') }}</a>
                                     @endif
                                     @if($canDeleteCustomers)
                                         <form method="POST" action="{{ route('customers.destroy', $customer) }}" data-confirm="{{ __('customers.messages.delete_confirm', ['name' => $customer->full_name]) }}">

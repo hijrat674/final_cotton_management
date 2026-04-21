@@ -43,6 +43,7 @@
                 </div>
 
                 <div class="d-flex flex-wrap gap-2 mt-4">
+                    @include('layouts.partials.back-button', ['fallback' => route('users.index')])
                     <a href="{{ route('users.edit', $user) }}" class="btn btn-primary">{{ __('users.actions.edit_user') }}</a>
 
                     @if(! $user->is(auth()->user()))

@@ -61,6 +61,10 @@
                     <span class="detail-label">Notes</span>
                     <p class="mb-0">{{ $transaction->notes ?: 'No notes attached to this transaction.' }}</p>
                 </div>
+
+                <div class="d-flex flex-wrap gap-2 mt-4">
+                    @include('layouts.partials.back-button', ['fallback' => route('inventory-transactions.index')])
+                </div>
             </div>
         </div>
 

@@ -25,7 +25,7 @@
 
         <div class="d-flex flex-wrap gap-2 mt-4">
             <button type="submit" class="btn btn-primary">Update Customer</button>
-            <a href="{{ route('customers.show', $customer) }}" class="btn btn-outline-secondary">Cancel</a>
+            @include('layouts.partials.back-button', ['fallback' => route('customers.show', $customer)])
         </div>
     </form>
 @endsection

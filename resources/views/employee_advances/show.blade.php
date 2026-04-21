@@ -24,6 +24,7 @@
             <p class="text-muted mb-0">{{ $employeeAdvance->advance_date->format('F d, Y') }} - {{ $employeeAdvance->employee->department }}</p>
         </div>
         <div class="d-flex flex-wrap gap-2">
+            @include('layouts.partials.back-button', ['fallback' => route('employee-advances.index')])
             @include('employee_advances.partials.status-badge', ['employeeAdvance' => $employeeAdvance])
             @if($canManageAdvances)
                 <a href="{{ route('employee-advances.create') }}" class="btn btn-outline-primary">New Advance</a>

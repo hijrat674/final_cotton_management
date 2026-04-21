@@ -21,7 +21,6 @@
     <div class="content-card form-card">
         <div class="mb-4">
             <h2 class="section-title mb-1">{{ __('production.edit.heading') }}</h2>
-            <p class="section-text mb-0">{{ __('production.edit.description') }}</p>
         </div>
 
         <form method="POST" action="{{ route('production-stages.update', $stage) }}" data-production-stage-form>
@@ -34,10 +33,7 @@
                     <i class="bi bi-save me-1"></i>
                     {{ __('production.actions.update') }}
                 </button>
-                <a href="{{ route('production-stages.show', $stage) }}" class="btn btn-outline-secondary">
-                    <i class="bi bi-x-circle me-1"></i>
-                    {{ __('production.actions.cancel') }}
-                </a>
+                @include('layouts.partials.back-button', ['fallback' => route('production-stages.show', $stage)])
             </div>
         </form>
     </div>

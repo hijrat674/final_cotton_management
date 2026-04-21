@@ -28,7 +28,6 @@
         <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3 mb-3">
             <div>
                 <h2 class="section-title mb-1">{{ __('payroll.index.records_title') }}</h2>
-                <p class="section-text mb-0">{{ __('payroll.index.records_text') }}</p>
             </div>
             @if($canManagePayroll)
                 <a href="{{ route('salary-records.create') }}" class="btn btn-primary">{{ __('payroll.actions.create_salary_record') }}</a>

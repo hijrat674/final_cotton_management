@@ -1,4 +1,4 @@
-<div class="row g-4">
+<div class="row g-3 cotton-entry-form-grid">
     <div class="col-md-6">
         <label for="truck_number" class="form-label">{{ __('cotton.fields.truck_number') }}</label>
         <input type="text" id="truck_number" name="truck_number" value="{{ old('truck_number', $entry->truck_number ?? '') }}" class="form-control @error('truck_number') is-invalid @enderror" required>

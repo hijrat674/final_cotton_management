@@ -30,12 +30,14 @@
                     <span class="users-summary-icon" aria-hidden="true">
                         <i class="bi bi-box-seam-fill"></i>
                     </span>
-                    <div class="users-summary-copy">
-                        <span class="users-summary-label">{{ __('inventory.summary.total_items') }}</span>
-                        <div class="users-summary-value-wrap">
-                            <strong class="users-summary-value">{{ $summary['total_items'] }}</strong>
+                    <div class="users-summary-copy inventory-summary-copy">
+                        <div class="inventory-summary-heading">
+                            <span class="users-summary-label">{{ __('inventory.summary.total_items') }}</span>
                         </div>
-                        <span class="users-summary-meta">{{ __('inventory.summary.total_items_text') }}</span>
+                        <div class="users-summary-value-wrap inventory-summary-value-wrap">
+                            <strong class="users-summary-value inventory-summary-value">{{ $summary['total_items'] }}</strong>
+                        </div>
+                        <span class="users-summary-meta inventory-summary-meta">{{ __('inventory.summary.total_items_text') }}</span>
                     </div>
                 </article>
             </div>
@@ -44,12 +46,14 @@
                     <span class="users-summary-icon" aria-hidden="true">
                         <i class="bi bi-bar-chart-line-fill"></i>
                     </span>
-                    <div class="users-summary-copy">
-                        <span class="users-summary-label">{{ __('inventory.summary.total_stock_quantity') }}</span>
-                        <div class="users-summary-value-wrap">
-                            <strong class="users-summary-value">{{ number_format($summary['total_stock_quantity'], 3) }}</strong>
+                    <div class="users-summary-copy inventory-summary-copy">
+                        <div class="inventory-summary-heading">
+                            <span class="users-summary-label">{{ __('inventory.summary.total_stock_quantity') }}</span>
                         </div>
-                        <span class="users-summary-meta">{{ __('inventory.summary.total_stock_quantity_text') }}</span>
+                        <div class="users-summary-value-wrap inventory-summary-value-wrap">
+                            <strong class="users-summary-value inventory-summary-value">{{ number_format($summary['total_stock_quantity'], 3) }}</strong>
+                        </div>
+                        <span class="users-summary-meta inventory-summary-meta">{{ __('inventory.summary.total_stock_quantity_text') }}</span>
                     </div>
                 </article>
             </div>
@@ -58,12 +62,14 @@
                     <span class="users-summary-icon" aria-hidden="true">
                         <i class="bi bi-exclamation-triangle-fill"></i>
                     </span>
-                    <div class="users-summary-copy">
-                        <span class="users-summary-label">{{ __('inventory.summary.low_stock_items') }}</span>
-                        <div class="users-summary-value-wrap">
-                            <strong class="users-summary-value">{{ $summary['low_stock_count'] }}</strong>
+                    <div class="users-summary-copy inventory-summary-copy">
+                        <div class="inventory-summary-heading">
+                            <span class="users-summary-label">{{ __('inventory.summary.low_stock_items') }}</span>
                         </div>
-                        <span class="users-summary-meta">{{ __('inventory.summary.low_stock_items_text') }}</span>
+                        <div class="users-summary-value-wrap inventory-summary-value-wrap">
+                            <strong class="users-summary-value inventory-summary-value">{{ $summary['low_stock_count'] }}</strong>
+                        </div>
+                        <span class="users-summary-meta inventory-summary-meta">{{ __('inventory.summary.low_stock_items_text') }}</span>
                     </div>
                 </article>
             </div>
@@ -72,12 +78,14 @@
                     <span class="users-summary-icon" aria-hidden="true">
                         <i class="bi bi-x-octagon-fill"></i>
                     </span>
-                    <div class="users-summary-copy">
-                        <span class="users-summary-label">{{ __('inventory.summary.out_of_stock') }}</span>
-                        <div class="users-summary-value-wrap">
-                            <strong class="users-summary-value">{{ $summary['out_of_stock_count'] }}</strong>
+                    <div class="users-summary-copy inventory-summary-copy">
+                        <div class="inventory-summary-heading">
+                            <span class="users-summary-label">{{ __('inventory.summary.out_of_stock') }}</span>
                         </div>
-                        <span class="users-summary-meta">{{ __('inventory.summary.out_of_stock_text') }}</span>
+                        <div class="users-summary-value-wrap inventory-summary-value-wrap">
+                            <strong class="users-summary-value inventory-summary-value">{{ $summary['out_of_stock_count'] }}</strong>
+                        </div>
+                        <span class="users-summary-meta inventory-summary-meta">{{ __('inventory.summary.out_of_stock_text') }}</span>
                     </div>
                 </article>
             </div>
@@ -122,18 +130,18 @@
                             <span class="users-summary-icon" aria-hidden="true">
                                 <i class="bi {{ $iconConfig['icon'] }}"></i>
                             </span>
-                            <div class="users-summary-copy">
-                                <div class="inventory-card-head">
+                            <div class="users-summary-copy inventory-summary-copy">
+                                <div class="inventory-card-head inventory-summary-heading">
                                     <span class="users-summary-label inventory-item-label">{{ $summaryItem->product_name }}</span>
                                 </div>
-                                <div class="users-summary-value-wrap inventory-stock-wrap">
+                                <div class="users-summary-value-wrap inventory-stock-wrap inventory-summary-value-wrap">
                                     <strong class="users-summary-value inventory-stock-line">
-                                        <span class="inventory-stock-unit">{{ strtoupper($summaryItem->unit) }}</span>
                                         <span class="inventory-stock-value">{{ number_format($summaryItem->current_stock, 3) }}</span>
+                                        <span class="inventory-stock-unit">{{ strtoupper($summaryItem->unit) }}</span>
                                     </strong>
                                 </div>
-                                <div class="inventory-card-foot">
-                                    <span class="users-summary-meta">{{ __($productTypes[$summaryItem->product_type] ?? ucfirst(str_replace('_', ' ', $summaryItem->product_type))) }}</span>
+                                <div class="inventory-card-foot inventory-summary-meta-wrap">
+                                    <span class="users-summary-meta inventory-summary-meta">{{ __($productTypes[$summaryItem->product_type] ?? ucfirst(str_replace('_', ' ', $summaryItem->product_type))) }}</span>
                                 </div>
                             </div>
                         </article>
@@ -150,7 +158,13 @@
                 <p class="section-text mb-0">{{ __('inventory.index.catalog_text') }}</p>
             </div>
             @if($canManageItems)
-                <a href="{{ route('inventory-items.create') }}" class="btn btn-primary">{{ __('inventory.actions.create') }}</a>
+                <a
+                    href="{{ route('inventory-items.create') }}"
+                    class="btn btn-primary"
+                    data-modal-open
+                    data-modal-size="xl"
+                    data-modal-title="{{ __('inventory.actions.create') }}"
+                >{{ __('inventory.actions.create') }}</a>
             @endif
         </div>
 
@@ -227,6 +241,9 @@
                                         class="btn btn-sm btn-outline-primary action-icon-btn"
                                         title="{{ __('inventory.actions.view') }}"
                                         aria-label="{{ __('inventory.actions.view') }}"
+                                        data-modal-open
+                                        data-modal-size="lg"
+                                        data-modal-title="{{ __('inventory.actions.view') }}"
                                     >
                                         <i class="bi bi-eye" aria-hidden="true"></i>
                                     </a>
@@ -236,6 +253,9 @@
                                             class="btn btn-sm btn-outline-secondary action-icon-btn"
                                             title="{{ __('inventory.actions.edit') }}"
                                             aria-label="{{ __('inventory.actions.edit') }}"
+                                            data-modal-open
+                                            data-modal-size="xl"
+                                            data-modal-title="{{ __('inventory.actions.edit') }}"
                                         >
                                             <i class="bi bi-pencil-square" aria-hidden="true"></i>
                                         </a>

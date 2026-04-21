@@ -25,6 +25,7 @@
             <p class="text-muted mb-0">{{ $sale->customer->full_name }} • {{ $sale->sale_date->format('M d, Y') }}</p>
         </div>
         <div class="d-flex flex-wrap gap-2">
+            @include('layouts.partials.back-button', ['fallback' => route('sales.index')])
             @include('sales.partials.payment-status-badge', ['sale' => $sale])
             @if($canManageSales)
                 <a href="{{ route('sales.edit', $sale) }}" class="btn btn-outline-primary">Edit Sale</a>

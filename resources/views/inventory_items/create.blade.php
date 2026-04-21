@@ -29,7 +29,7 @@
 
             <div class="d-flex flex-wrap gap-2 mt-4">
                 <button type="submit" class="btn btn-primary">Create Item</button>
-                <a href="{{ route('inventory-items.index') }}" class="btn btn-outline-secondary">Cancel</a>
+                @include('layouts.partials.back-button', ['fallback' => route('inventory-items.index')])
             </div>
         </form>
     </div>

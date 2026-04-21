@@ -14,7 +14,6 @@
         </button>
         <div class="topbar-heading">
             <h1 class="page-title">@yield('page-title', __('sidebar.dashboard'))</h1>
-            <p class="page-subtitle mb-0">@yield('page-subtitle', __('app.foundation_module'))</p>
         </div>
     </div>
 
@@ -46,23 +45,4 @@
         </ul>
     </div>
 
-    <div class="dropdown topbar-user">
-        <button class="btn user-menu dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <span class="user-avatar">{{ strtoupper(substr($user->name, 0, 1)) }}</span>
-            <span class="text-start">
-                <span class="d-block fw-semibold">{{ $user->name }}</span>
-                <span class="d-block small text-muted">{{ $user->email }}</span>
-            </span>
-        </button>
-        <ul class="dropdown-menu {{ ($isRtl ?? false) ? 'dropdown-menu-start' : 'dropdown-menu-end' }} shadow-sm border-0">
-            <li class="dropdown-item-text small text-muted">{{ __('roles.'.$user->role) }}</li>
-            <li><hr class="dropdown-divider"></li>
-            <li>
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-                    <button type="submit" class="dropdown-item">{{ __('auth.sign_out') }}</button>
-                </form>
-            </li>
-        </ul>
-    </div>
 </header>

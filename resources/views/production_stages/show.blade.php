@@ -76,6 +76,7 @@
 
                 @if($canManageStages)
                     <div class="d-flex flex-wrap gap-2 mt-4">
+                        @include('layouts.partials.back-button', ['fallback' => route('production-stages.index')])
                         <a href="{{ route('production-stages.edit', $stage) }}" class="btn btn-primary">
                             <i class="bi bi-pencil-square me-1"></i>
                             {{ __('production.actions.edit_stage') }}
@@ -88,6 +89,10 @@
                                 {{ __('production.actions.delete_stage') }}
                             </button>
                         </form>
+                    </div>
+                @else
+                    <div class="d-flex flex-wrap gap-2 mt-4">
+                        @include('layouts.partials.back-button', ['fallback' => route('production-stages.index')])
                     </div>
                 @endif
             </div>

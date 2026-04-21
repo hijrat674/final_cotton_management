@@ -27,7 +27,6 @@
         <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3 mb-3">
             <div>
                 <h2 class="section-title mb-1">{{ __('employees.index.register_title') }}</h2>
-                <p class="section-text mb-0">{{ __('employees.index.register_text') }}</p>
             </div>
             @if($canManageEmployees)
                 <a href="{{ route('employees.create') }}" class="btn btn-primary">{{ __('employees.actions.new') }}</a>

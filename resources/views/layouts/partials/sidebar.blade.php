@@ -2,12 +2,17 @@
     $user = auth()->user();
     $currentRoute = request()->route()?->getName();
     $isRtl = in_array(app()->getLocale(), ['ps', 'fa'], true);
+    $languageLabels = [
+        'en' => 'English',
+        'ps' => 'پښتو',
+        'fa' => 'فارسی',
+    ];
     $sidebarSectionLabelClass = 'sidebar-section-label' . ($isRtl ? ' text-end' : '');
     $sidebarLinkClass = 'sidebar-link' . ($isRtl ? ' flex-row-reverse justify-content-end text-end' : '');
     $sidebarLinkTextClass = 'sidebar-link-text' . ($isRtl ? ' text-end' : '');
     $sidebarBrandClass = 'sidebar-brand sidebar-panel text-center';
     $sidebarBrandContentClass = 'sidebar-brand-content text-center';
-    $sidebarFooterClass = 'sidebar-footer sidebar-panel text-center';
+    $sidebarFooterClass = 'sidebar-footer sidebar-panel';
 @endphp
 
 <aside class="sidebar" id="sidebar">
@@ -115,9 +120,50 @@
     </div>
 
     <div class="{{ $sidebarFooterClass }}">
-        <div class="sidebar-footer-content">
-            <div class="sidebar-footer-label">{{ __('app.current_role') }}</div>
-            <div class="sidebar-footer-role">{{ __('roles.'.$user->role) }}</div>
+        <div class="sidebar-user-panel">
+            <div class="sidebar-user-meta">
+                <span class="sidebar-user-avatar" aria-hidden="true">{{ strtoupper(substr($user->name, 0, 1)) }}</span>
+                <div class="sidebar-user-copy">
+                    <div class="sidebar-user-name">{{ $user->name }}</div>
+                    <div class="sidebar-user-role">{{ __('roles.'.$user->role) }}</div>
+                </div>
+            </div>
+
+            <div class="dropdown sidebar-language">
+                <button class="sidebar-language-button dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="sidebar-language-icon" aria-hidden="true">
+                        <i class="bi bi-globe2"></i>
+                    </span>
+                    <span class="sidebar-language-copy">
+                        <span class="sidebar-language-label">{{ __('app.language') }}</span>
+                        <span class="sidebar-language-current" lang="{{ $currentLocale }}">
+                            {!! $languageLabels[$currentLocale] ?? e($supportedLocales[$currentLocale]['native'] ?? strtoupper($currentLocale)) !!}
+                        </span>
+                    </span>
+                </button>
+                <ul class="dropdown-menu {{ $isRtl ? 'dropdown-menu-start' : 'dropdown-menu-end' }} shadow-sm border-0">
+                    @foreach($supportedLocales as $localeCode => $localeConfig)
+                        <li>
+                            <a href="{{ route('language.switch', ['locale' => $localeCode]) }}" class="dropdown-item language-option {{ $currentLocale === $localeCode ? 'active' : '' }}">
+                                <span class="language-option-label" lang="{{ $localeCode }}">
+                                    {!! $languageLabels[$localeCode] ?? e($localeConfig['native']) !!}
+                                </span>
+                                @if($currentLocale === $localeCode)
+                                    <i class="bi bi-check2"></i>
+                                @endif
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" class="sidebar-signout-button">
+                    <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                    <span>{{ __('auth.sign_out') }}</span>
+                </button>
+            </form>
         </div>
     </div>
 </aside>

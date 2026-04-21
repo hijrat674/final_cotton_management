@@ -22,7 +22,7 @@
         @include('employee_advances.partials.form')
 
         <div class="d-flex justify-content-end gap-2 mt-4">
-            <a href="{{ route('employee-advances.index') }}" class="btn btn-outline-secondary">Cancel</a>
+            @include('layouts.partials.back-button', ['fallback' => route('employee-advances.index')])
             <button type="submit" class="btn btn-primary">Save Advance</button>
         </div>
     </form>

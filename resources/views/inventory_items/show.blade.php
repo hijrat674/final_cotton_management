@@ -56,6 +56,7 @@
                 </div>
 
                 <div class="d-flex flex-wrap gap-2 mt-4">
+                    @include('layouts.partials.back-button', ['fallback' => route('inventory-items.index')])
                     @if($canManageItems)
                         <a href="{{ route('inventory-items.edit', $item) }}" class="btn btn-primary">Edit Item</a>
                     @endif

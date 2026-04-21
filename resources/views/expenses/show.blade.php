@@ -79,6 +79,7 @@
 
                     @if($canManageExpenses)
                         <div class="d-flex flex-wrap gap-2 mt-4 expense-action-row">
+                            @include('layouts.partials.back-button', ['fallback' => route('expenses.index')])
                             <a href="{{ route('expenses.edit', $expense) }}" class="btn btn-primary">
                                 <i class="bi bi-pencil-square me-1"></i>
                                 {{ __('expenses.actions.edit') }}
@@ -91,6 +92,10 @@
                                     {{ __('expenses.actions.delete') }}
                                 </button>
                             </form>
+                        </div>
+                    @else
+                        <div class="d-flex flex-wrap gap-2 mt-4 expense-action-row">
+                            @include('layouts.partials.back-button', ['fallback' => route('expenses.index')])
                         </div>
                     @endif
                 </div>

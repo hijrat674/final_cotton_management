@@ -21,7 +21,6 @@
     <div class="content-card form-card">
         <div class="mb-4">
             <h2 class="section-title mb-1">{{ __('cotton.edit.heading', ['truck' => $entry->truck_number]) }}</h2>
-            <p class="section-text mb-0">{{ __('cotton.edit.description') }}</p>
         </div>
 
         <form method="POST" action="{{ route('cotton-entries.update', $entry) }}" data-cotton-entry-form>
@@ -34,10 +33,7 @@
                     <i class="bi bi-save me-1"></i>
                     {{ __('cotton.actions.update') }}
                 </button>
-                <a href="{{ route('cotton-entries.show', $entry) }}" class="btn btn-outline-secondary">
-                    <i class="bi bi-arrow-left me-1"></i>
-                    {{ __('cotton.actions.back') }}
-                </a>
+                @include('layouts.partials.back-button', ['fallback' => route('cotton-entries.show', $entry)])
             </div>
         </form>
     </div>

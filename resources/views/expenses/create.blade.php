@@ -20,7 +20,6 @@
     <div class="content-card form-card">
         <div class="mb-4">
             <h2 class="section-title mb-1">New Expense</h2>
-            <p class="section-text mb-0">Capture the expense with the correct category, amount, date, and optional production linkage.</p>
         </div>
 
         <form method="POST" action="{{ route('expenses.store') }}">
@@ -32,10 +31,7 @@
                     <i class="bi bi-save me-1"></i>
                     Save Expense
                 </button>
-                <a href="{{ route('expenses.index') }}" class="btn btn-outline-secondary">
-                    <i class="bi bi-x-circle me-1"></i>
-                    Cancel
-                </a>
+                @include('layouts.partials.back-button', ['fallback' => route('expenses.index')])
             </div>
         </form>
     </div>

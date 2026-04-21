@@ -15,7 +15,13 @@
                 <h2 class="section-title mb-1">{{ __('users.index.directory_title') }}</h2>
                 <p class="section-text mb-0">{{ __('users.index.directory_text') }}</p>
             </div>
-            <a href="{{ route('users.create') }}" class="btn btn-primary">{{ __('users.actions.create') }}</a>
+            <a
+                href="{{ route('users.create') }}"
+                class="btn btn-primary"
+                data-modal-open
+                data-modal-size="xl"
+                data-modal-title="{{ __('users.actions.create') }}"
+            >{{ __('users.actions.create') }}</a>
         </div>
 
         <form method="GET" action="{{ route('users.index') }}" class="filters-form" id="userFiltersForm">
@@ -97,6 +103,9 @@
                                         class="btn btn-sm btn-outline-primary action-icon-btn"
                                         title="{{ __('users.actions.view') }}"
                                         aria-label="{{ __('users.actions.view') }}"
+                                        data-modal-open
+                                        data-modal-size="lg"
+                                        data-modal-title="{{ __('users.actions.view') }}"
                                     >
                                         <i class="bi bi-eye" aria-hidden="true"></i>
                                     </a>
@@ -105,6 +114,9 @@
                                         class="btn btn-sm btn-outline-secondary action-icon-btn"
                                         title="{{ __('users.actions.edit') }}"
                                         aria-label="{{ __('users.actions.edit') }}"
+                                        data-modal-open
+                                        data-modal-size="xl"
+                                        data-modal-title="{{ __('users.actions.edit') }}"
                                     >
                                         <i class="bi bi-pencil-square" aria-hidden="true"></i>
                                     </a>

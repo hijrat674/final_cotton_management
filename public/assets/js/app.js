@@ -1,4 +1,160 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const isModalPage = document.body.classList.contains('modal-page-body');
+
+    if (isModalPage) {
+        document.querySelectorAll('form[action]').forEach((form) => {
+            const action = form.getAttribute('action');
+
+            if (!action || action.startsWith('#')) {
+                return;
+            }
+
+            const parsedAction = new URL(action, window.location.origin);
+
+            if (parsedAction.origin !== window.location.origin || parsedAction.searchParams.has('modal')) {
+                return;
+            }
+
+            parsedAction.searchParams.set('modal', '1');
+            form.setAttribute('action', parsedAction.toString());
+        });
+    }
+
+    const actionOverlayModal = document.getElementById('actionOverlayModal');
+    const bootstrapModal = actionOverlayModal && window.bootstrap?.Modal
+        ? window.bootstrap.Modal.getOrCreateInstance(actionOverlayModal)
+        : null;
+
+    if (actionOverlayModal && bootstrapModal) {
+        const modalTitle = actionOverlayModal.querySelector('#actionOverlayModalLabel');
+        const modalFrame = actionOverlayModal.querySelector('[data-modal-frame]');
+        const openFullLink = actionOverlayModal.querySelector('[data-modal-open-full]');
+        const defaultTitle = modalTitle?.textContent || 'Loading';
+        let activeUrl = '';
+
+        const cleanupModalArtifacts = () => {
+            document.querySelectorAll('.modal-backdrop').forEach((backdrop) => {
+                backdrop.remove();
+            });
+
+            document.body.classList.remove('modal-open');
+            document.body.style.removeProperty('overflow');
+            document.body.style.removeProperty('padding-right');
+
+            actionOverlayModal.classList.remove('show');
+            actionOverlayModal.setAttribute('aria-hidden', 'true');
+            actionOverlayModal.style.removeProperty('display');
+        };
+
+        const buildModalUrl = (url) => {
+            const parsedUrl = new URL(url, window.location.origin);
+
+            if (!parsedUrl.searchParams.has('modal')) {
+                parsedUrl.searchParams.set('modal', '1');
+            }
+
+            return parsedUrl.toString();
+        };
+
+        const resetActionOverlay = () => {
+            actionOverlayModal.classList.remove('is-ready');
+
+            if (modalTitle) {
+                modalTitle.textContent = defaultTitle;
+            }
+
+            if (modalFrame) {
+                modalFrame.setAttribute('src', 'about:blank');
+            }
+
+            if (openFullLink) {
+                openFullLink.setAttribute('href', '#');
+            }
+
+            activeUrl = '';
+        };
+
+        document.querySelectorAll('[data-modal-open]').forEach((trigger) => {
+            trigger.addEventListener('click', (event) => {
+                if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+                    return;
+                }
+
+                const url = trigger.getAttribute('href') || trigger.dataset.modalUrl;
+
+                if (!url || url.startsWith('#')) {
+                    return;
+                }
+
+                event.preventDefault();
+
+                const dialog = actionOverlayModal.querySelector('.action-overlay-dialog');
+                const requestedSize = trigger.dataset.modalSize || 'lg';
+                const title = trigger.dataset.modalTitle || trigger.getAttribute('title') || trigger.getAttribute('aria-label') || defaultTitle;
+
+                dialog?.classList.remove('modal-sm', 'modal-lg', 'modal-xl', 'modal-fullscreen-lg-down');
+
+                if (requestedSize === 'sm') {
+                    dialog?.classList.add('modal-sm');
+                } else if (requestedSize === 'xl') {
+                    dialog?.classList.add('modal-xl');
+                } else {
+                    dialog?.classList.add('modal-lg');
+                }
+
+                activeUrl = new URL(url, window.location.origin).toString();
+
+                if (modalTitle) {
+                    modalTitle.textContent = title;
+                }
+
+                if (openFullLink) {
+                    openFullLink.setAttribute('href', activeUrl);
+                }
+
+                actionOverlayModal.classList.remove('is-ready');
+
+                if (modalFrame) {
+                    modalFrame.src = buildModalUrl(activeUrl);
+                }
+
+                bootstrapModal.show();
+            });
+        });
+
+        modalFrame?.addEventListener('load', () => {
+            try {
+                const frameUrl = modalFrame.contentWindow?.location?.href;
+                const parsedFrameUrl = frameUrl ? new URL(frameUrl) : null;
+
+                if (!activeUrl || parsedFrameUrl?.href === 'about:blank') {
+                    return;
+                }
+
+                if (parsedFrameUrl && !parsedFrameUrl.searchParams.has('modal')) {
+                    window.location.href = parsedFrameUrl.toString();
+                    return;
+                }
+
+                const frameTitle = modalFrame.contentDocument?.title?.trim();
+
+                if (frameTitle && modalTitle) {
+                    modalTitle.textContent = frameTitle;
+                }
+            } catch (error) {
+                // Same-origin access is expected, but fail quietly if the document is unavailable.
+            }
+
+            actionOverlayModal.classList.add('is-ready');
+        });
+
+        actionOverlayModal.addEventListener('hide.bs.modal', cleanupModalArtifacts);
+        actionOverlayModal.addEventListener('hidden.bs.modal', () => {
+            resetActionOverlay();
+            cleanupModalArtifacts();
+        });
+    }
+
     document.querySelectorAll('[data-password-toggle]').forEach((button) => {
         if (button.hasAttribute('data-password-press-hold')) {
             return;

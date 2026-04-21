@@ -6,7 +6,7 @@ return [
     'dashboard_title' => 'د حسابدارۍ ډشبورډ',
     'dashboard_subtitle' => 'اتومات مالي شننې چې د ERP راکړو ورکړو څخه جوړې شوې دي',
     'profit_loss' => 'ګټه او تاوان',
-    'profit_loss_subtitle' => 'عواید، لګښتونه او د اوسنۍ ګټې فعالیت',
+    'profit_loss_subtitle' => 'عواید، مصارف او د اوسنۍ ګټې فعالیت',
     'cash_summary' => 'د نغدو پیسو لنډیز',
     'cash_summary_subtitle' => 'راتلونکې او وتونکې نغدې خوځښتونه چې په اتومات ډول ثبت شوي',
     'cash_ledger' => 'د نغدو پیسو لیجر',

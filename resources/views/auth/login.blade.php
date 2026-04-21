@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login | Factory Management System</title>
+    <title>{{ __('auth.sign_in') }} | {{ config('app.name') }}</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @include('layouts.partials.frontend-head-assets')
     <link rel="stylesheet" href="{{ asset('assets/css/auth/login.css') }}">
@@ -13,7 +13,7 @@
         <section class="login-card card border-0">
             <div class="card-body login-card-body">
                 <div class="login-header">
-                    <span class="login-badge">Factory ERP</span>
+                    <span class="login-badge">{{ __('app.short_name') }}</span>
                     <h1 class="login-title">Sign in</h1>
                     <p class="login-subtitle">Enter your credentials to access the system.</p>
                 </div>

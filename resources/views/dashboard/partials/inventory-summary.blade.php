@@ -13,10 +13,12 @@
                 <span class="users-summary-icon" aria-hidden="true">
                     <i class="bi bi-box-seam-fill"></i>
                 </span>
-                <div class="users-summary-copy">
-                    <span class="users-summary-label">{{ __('dashboard.inventory.total_items') }}</span>
-                    <div class="users-summary-value-wrap">
-                        <strong class="users-summary-value">{{ $inventorySummary['total_items'] }}</strong>
+                <div class="users-summary-copy inventory-summary-copy">
+                    <div class="inventory-summary-heading">
+                        <span class="users-summary-label">{{ __('dashboard.inventory.total_items') }}</span>
+                    </div>
+                    <div class="users-summary-value-wrap inventory-summary-value-wrap">
+                        <strong class="users-summary-value inventory-summary-value">{{ $inventorySummary['total_items'] }}</strong>
                     </div>
                 </div>
             </article>
@@ -27,10 +29,12 @@
                 <span class="users-summary-icon" aria-hidden="true">
                     <i class="bi bi-exclamation-triangle-fill"></i>
                 </span>
-                <div class="users-summary-copy">
-                    <span class="users-summary-label">{{ __('dashboard.inventory.low_stock') }}</span>
-                    <div class="users-summary-value-wrap">
-                        <strong class="users-summary-value">{{ $inventorySummary['low_stock_count'] }}</strong>
+                <div class="users-summary-copy inventory-summary-copy">
+                    <div class="inventory-summary-heading">
+                        <span class="users-summary-label">{{ __('dashboard.inventory.low_stock') }}</span>
+                    </div>
+                    <div class="users-summary-value-wrap inventory-summary-value-wrap">
+                        <strong class="users-summary-value inventory-summary-value">{{ $inventorySummary['low_stock_count'] }}</strong>
                     </div>
                 </div>
             </article>
@@ -41,10 +45,12 @@
                 <span class="users-summary-icon" aria-hidden="true">
                     <i class="bi bi-x-octagon-fill"></i>
                 </span>
-                <div class="users-summary-copy">
-                    <span class="users-summary-label">{{ __('dashboard.inventory.out_of_stock') }}</span>
-                    <div class="users-summary-value-wrap">
-                        <strong class="users-summary-value">{{ $inventorySummary['out_of_stock_count'] }}</strong>
+                <div class="users-summary-copy inventory-summary-copy">
+                    <div class="inventory-summary-heading">
+                        <span class="users-summary-label">{{ __('dashboard.inventory.out_of_stock') }}</span>
+                    </div>
+                    <div class="users-summary-value-wrap inventory-summary-value-wrap">
+                        <strong class="users-summary-value inventory-summary-value">{{ $inventorySummary['out_of_stock_count'] }}</strong>
                     </div>
                 </div>
             </article>
@@ -90,12 +96,14 @@
                         <span class="users-summary-icon" aria-hidden="true">
                             <i class="bi {{ $iconConfig['icon'] }}"></i>
                         </span>
-                        <div class="users-summary-copy">
-                            <span class="users-summary-label inventory-item-label">{{ $item['name'] }}</span>
-                            <div class="users-summary-value-wrap">
+                        <div class="users-summary-copy inventory-summary-copy">
+                            <div class="inventory-summary-heading">
+                                <span class="users-summary-label inventory-item-label">{{ $item['name'] }}</span>
+                            </div>
+                            <div class="users-summary-value-wrap inventory-summary-value-wrap">
                                 <strong class="users-summary-value inventory-stock-line">
                                     <span class="inventory-stock-value">{{ $item['formatted_quantity'] }}</span>
-                                    <span class="inventory-stock-unit">&nbsp;{{ $item['unit'] }}</span>
+                                    <span class="inventory-stock-unit">{{ $item['unit'] }}</span>
                                 </strong>
                             </div>
                         </div>

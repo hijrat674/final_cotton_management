@@ -24,7 +24,6 @@
         <div class="content-card form-card">
             <div class="mb-4">
                 <h2 class="section-title mb-1">{{ __('expenses.edit.heading') }}</h2>
-                <p class="section-text mb-0">{{ __('expenses.edit.description') }}</p>
             </div>
 
             <form method="POST" action="{{ route('expenses.update', $expense) }}">
@@ -37,10 +36,7 @@
                         <i class="bi bi-save me-1"></i>
                         {{ __('expenses.actions.update') }}
                     </button>
-                    <a href="{{ route('expenses.show', $expense) }}" class="btn btn-outline-secondary">
-                        <i class="bi bi-x-circle me-1"></i>
-                        {{ __('expenses.actions.cancel') }}
-                    </a>
+                    @include('layouts.partials.back-button', ['fallback' => route('expenses.show', $expense)])
                 </div>
             </form>
         </div>
